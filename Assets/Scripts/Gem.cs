@@ -1,13 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum GemType { Blue, Green, Orange, Purple, Red, Teal }
+
 public class Gem : MonoBehaviour
 {
-	Image image;
+	
+
+	[SerializeField] private GemType gemType;
 	[SerializeField] private SpriteRenderer sprite;
-
-	public void SetColor()
+	
+	private void Start()
 	{
-
+		
 	}
 }

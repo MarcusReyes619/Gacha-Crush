@@ -303,7 +303,13 @@ MonoBehaviour:
   spacing: 1
   width: 8
   height: 8
-  gemPrefab: {fileID: 3801918682193748417, guid: 1084fee9ca3a69144a50b38b83f96cc4, type: 3}
+  gemPrefabs:
+  - {fileID: 3801918682193748417, guid: 1084fee9ca3a69144a50b38b83f96cc4, type: 3}
+  - {fileID: 3801918682193748417, guid: 3b745c34fee9ca84cbbf72c31c4ce0cb, type: 3}
+  - {fileID: 3801918682193748417, guid: f89d2ed1bb69781488f48afc4e214810, type: 3}
+  - {fileID: 3801918682193748417, guid: ab1baf0ae188dd849ad3a027830fcde1, type: 3}
+  - {fileID: 3801918682193748417, guid: a38982706c472004cb955100e615dcdd, type: 3}
+  - {fileID: 3801918682193748417, guid: a9de033bc05c4fc42aebfbf061c02627, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
