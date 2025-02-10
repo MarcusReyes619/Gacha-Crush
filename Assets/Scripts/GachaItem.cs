@@ -3,9 +3,12 @@ using UnityEngine.UI;
 
 public class GachaItem : MonoBehaviour
 {
-    public Image GachaImg;
+    public Sprite GachaImg;
+    public Sprite Border;
     public Rarity Rarity;
 
+    
 }
+
 
 
