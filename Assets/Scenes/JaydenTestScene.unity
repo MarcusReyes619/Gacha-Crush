@@ -181,7 +181,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -300,8 +300,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f5a4b02fdd6024598ad23c9e9a5c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spacing: 5
-  gemObject: {fileID: 3180089894742263830, guid: 1084fee9ca3a69144a50b38b83f96cc4, type: 3}
+  spacing: 1
+  width: 8
+  height: 8
+  gemPrefab: {fileID: 3801918682193748417, guid: 1084fee9ca3a69144a50b38b83f96cc4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

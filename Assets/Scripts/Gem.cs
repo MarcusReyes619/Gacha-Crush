@@ -4,5 +4,10 @@ using UnityEngine.UI;
 public class Gem : MonoBehaviour
 {
 	Image image;
-	string color;
+	[SerializeField] private SpriteRenderer sprite;
+
+	public void SetColor()
+	{
+
+	}
 }
