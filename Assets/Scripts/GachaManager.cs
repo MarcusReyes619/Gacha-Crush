@@ -10,12 +10,44 @@ public class GachaManager : MonoBehaviour
     public List<Sprite> AllImages = new List<Sprite>();
     public List<Sprite> AllBorders = new List<Sprite>();
     public List<GachaItem> OwnedItems = new List<GachaItem>();
+    public Button pullButton;
+    private bool pulling = false;
+    private float pt = 0;
+    private float pc = 0;
 
-    public void Pull()
+    private void Update()
     {
-        Debug.Log("a");
+        if (pulling)
+        {
+            if (pt < 0)
+            {
+                Pull();
+                pc--;
+                if (pc < 0)
+                {
+                    pulling = false;
+                    OwnedItems.Add(Pull());
+                    pullButton.interactable = true;
+                }
+                else
+                {
+                    pt = 0.1f;
+                }
+            }
+            pt -= Time.deltaTime;
+        }
+    }
+    public void PullButton()
+    {
+        pulling = true;
+        pullButton.interactable = false;
+        pt = 0.1f;
+        pc = 10;
+    }
+    public GachaItem Pull()
+    {
 
-        GachaItem newItem = new GachaItem();
+        GachaItem newItem = ScriptableObject.CreateInstance<GachaItem>();
         newItem.GachaImg = AllImages[Random.Range(0, AllImages.Count-1)];
         
         float rand = Random.Range(0, 100);
@@ -47,8 +79,7 @@ public class GachaManager : MonoBehaviour
 
         border.sprite = newItem.Border;
         gachaImage.sprite = newItem.GachaImg;
-        OwnedItems.Add(newItem);
-
+        return newItem;
 
     }
 }
