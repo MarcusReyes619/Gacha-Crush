@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    
+   
     [Header("Game State")]
     [SerializeField] private bool IsGamePaused = false;
 
