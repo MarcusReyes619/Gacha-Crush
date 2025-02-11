@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 1875001904}
   - component: {fileID: 1875001905}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GridManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,6 +310,7 @@ MonoBehaviour:
   - {fileID: 3801918682193748417, guid: ab1baf0ae188dd849ad3a027830fcde1, type: 3}
   - {fileID: 3801918682193748417, guid: a38982706c472004cb955100e615dcdd, type: 3}
   - {fileID: 3801918682193748417, guid: a9de033bc05c4fc42aebfbf061c02627, type: 3}
+  cameraTransform: {fileID: 1679027967}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
