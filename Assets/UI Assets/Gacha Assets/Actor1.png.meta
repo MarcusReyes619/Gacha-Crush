@@ -1,0 +1,941 @@
+fileFormatVersion: 2
+guid: 4f4950ac1c493454a882a7b65d99a84b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3199294949871373731
+    second: Actor1_0
+  - first:
+      213: -345094371469603222
+    second: Actor1_1
+  - first:
+      213: -2644719746594264722
+    second: Actor1_2
+  - first:
+      213: 5798040017267913814
+    second: Actor1_3
+  - first:
+      213: -7094179202080397849
+    second: Actor1_4
+  - first:
+      213: 2174448747083212310
+    second: Actor1_5
+  - first:
+      213: 3272042489672545647
+    second: Actor1_6
+  - first:
+      213: 7261550511007689227
+    second: Actor1_7
+  - first:
+      213: 5720438816908009035
+    second: Actor1_8
+  - first:
+      213: -7851971210597204138
+    second: Actor1_9
+  - first:
+      213: 4715112456984334927
+    second: Actor1_10
+  - first:
+      213: 4874904985355933556
+    second: Actor1_11
+  - first:
+      213: 470607584957207768
+    second: Actor1_12
+  - first:
+      213: -5853590202653378474
+    second: Actor1_13
+  - first:
+      213: -4056876981901318529
+    second: Actor1_14
+  - first:
+      213: 2415690624640087243
+    second: Actor1_15
+  - first:
+      213: 943211171629105012
+    second: Actor1_16
+  - first:
+      213: 2164944238729133127
+    second: Actor1_17
+  - first:
+      213: -4901216295761264356
+    second: Actor1_18
+  - first:
+      213: -487957414698118620
+    second: Actor1_19
+  - first:
+      213: -2837985203637984049
+    second: Actor1_20
+  - first:
+      213: 4702196854097459393
+    second: Actor1_21
+  - first:
+      213: 2334305318171266958
+    second: Actor1_22
+  - first:
+      213: -5584674905106841484
+    second: Actor1_23
+  - first:
+      213: 3014962158401035276
+    second: Actor1_24
+  - first:
+      213: -8202727235344836539
+    second: Actor1_25
+  - first:
+      213: -9120720427747348325
+    second: Actor1_26
+  - first:
+      213: 4127130858689161374
+    second: Actor1_27
+  - first:
+      213: -4847541513576654508
+    second: Actor1_28
+  - first:
+      213: 8327502003460413139
+    second: Actor1_29
+  - first:
+      213: 2764209404838713239
+    second: Actor1_30
+  - first:
+      213: 8362136512679175137
+    second: Actor1_31
+  - first:
+      213: -850482593352824090
+    second: Actor1_32
+  - first:
+      213: -7508161497603247416
+    second: Actor1_33
+  - first:
+      213: -6919911872417862110
+    second: Actor1_34
+  - first:
+      213: -8508172237457917570
+    second: Actor1_35
+  - first:
+      213: -8576809094874272245
+    second: Actor1_36
+  - first:
+      213: 7689493127465766191
+    second: Actor1_37
+  - first:
+      213: 4228336670599568671
+    second: Actor1_38
+  - first:
+      213: 5871699466561046872
+    second: Actor1_39
+  - first:
+      213: -2241898900326412364
+    second: Actor1_40
+  - first:
+      213: -5805484911550124920
+    second: Actor1_41
+  - first:
+      213: 3064530610746144074
+    second: Actor1_42
+  - first:
+      213: -7525883188983582753
+    second: Actor1_43
+  - first:
+      213: 918099229626703004
+    second: Actor1_44
+  - first:
+      213: -3537930746169433965
+    second: Actor1_45
+  - first:
+      213: -326319449579196068
+    second: Actor1_46
+  - first:
+      213: -6596773949881501333
+    second: Actor1_47
+  - first:
+      213: 1991297017453783492
+    second: Actor1_48
+  - first:
+      213: -7848189469674975140
+    second: Actor1_49
+  - first:
+      213: -5543585048958031060
+    second: Actor1_50
+  - first:
+      213: 5613471298763850215
+    second: Actor1_51
+  - first:
+      213: 8118608131214735683
+    second: Actor1_52
+  - first:
+      213: 7934732889358443379
+    second: Actor1_53
+  - first:
+      213: -2022464153303805304
+    second: Actor1_54
+  - first:
+      213: -6532567301197136389
+    second: Actor1_55
+  - first:
+      213: 4041924039813691052
+    second: Actor1_56
+  - first:
+      213: 26257042152612823
+    second: Actor1_57
+  - first:
+      213: -5342264040278180511
+    second: Actor1_58
+  - first:
+      213: 3857473959771865708
+    second: Actor1_59
+  - first:
+      213: 8301463939030065481
+    second: Actor1_60
+  - first:
+      213: -6844212002159404508
+    second: Actor1_61
+  - first:
+      213: -9171382709729836834
+    second: Actor1_62
+  - first:
+      213: 6016519984315201226
+    second: Actor1_63
+  - first:
+      213: 9048803775681630852
+    second: Actor1_64
+  - first:
+      213: -6458316105420345314
+    second: Actor1_65
+  - first:
+      213: -203621899006402585
+    second: Actor1_66
+  - first:
+      213: -874651741555810168
+    second: Actor1_67
+  - first:
+      213: -8701919915648176426
+    second: Actor1_68
+  - first:
+      213: -7302626438751865546
+    second: Actor1_69
+  - first:
+      213: -5204957291782768924
+    second: Actor1_70
+  - first:
+      213: -1788691431013625754
+    second: Actor1_71
+  - first:
+      213: -3237436429274133097
+    second: Actor1_72
+  - first:
+      213: -7825695672479762878
+    second: Actor1_73
+  - first:
+      213: -7368242452645256393
+    second: Actor1_74
+  - first:
+      213: 499202085058049381
+    second: Actor1_75
+  - first:
+      213: -4005532636901207330
+    second: Actor1_76
+  - first:
+      213: 1701220095916385931
+    second: Actor1_77
+  - first:
+      213: 3732639267691127036
+    second: Actor1_78
+  - first:
+      213: -7951947499277060238
+    second: Actor1_79
+  - first:
+      213: -712795206205769165
+    second: Actor1_80
+  - first:
+      213: 6581046172658675774
+    second: Actor1_81
+  - first:
+      213: -5289858523154293808
+    second: Actor1_82
+  - first:
+      213: 7178884931904871236
+    second: Actor1_83
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Actor1_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 336
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b71f51d52c795a469a10e9335928bd0
+      internalID: 244666146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 336
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3746fab8735b18e4ba1e6c3a392069e5
+      internalID: 1224799452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 336
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184949d0af9875947a62b90ed8fc7f2b
+      internalID: 47265585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 336
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576173144b617af46be7fab6ebc91ba0
+      internalID: 1449799157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_4
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 336
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d8659762d14e14aa2b0a39c6fc1249
+      internalID: -914376212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_5
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 336
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf0bfcf93b6b1c498cd904bf93ea654
+      internalID: -1148553325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_6
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 336
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3c7e99223e9db40b0c20b1d9691b97
+      internalID: -173148492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_7
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 336
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3819be4b07fe8f94f9d8bba4486f3998
+      internalID: 1010702688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_8
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 336
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772b950cd009d2d4a828297869fa9f40
+      internalID: 1338345442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_36
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 144
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c2b5a6991bc7e4e91e79011fcefd41
+      internalID: -1124755840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_37
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 144
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d710fec9784508c44a38b573241cf424
+      internalID: 141604536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_38
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 144
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6e2d7e9ed02d242b71c8d39f122348
+      internalID: 896286627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_39
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 145
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ace10d9f87814442b2ed0892b2ddbbd
+      internalID: -105384939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_40
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 145
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d3b91672883d7428696e8cc9d28179
+      internalID: -1100027719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_41
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 145
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1738928ac1ebe094bb061a6d473a8b38
+      internalID: -42965782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_42
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 144
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df16810fa6296848ab3055e2d5392fa
+      internalID: -797146878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_43
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 144
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582b6eb9c4e78bd4e871ca7bfc6030a2
+      internalID: -2122836684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_44
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 144
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8fd5e17598b7a4e9260c0cf28b1a6a
+      internalID: -546344630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_45
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 144
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c93678c672d5554382ab903a971ee9b
+      internalID: -200933281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_46
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 144
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548b69688396ee54c88a0e31b34cd7d1
+      internalID: 220551022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor1_47
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 144
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3dff317119e69449f860b6b9bef8fb
+      internalID: -1453525285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e57f17fca0b8b2841a9163e798fcdcd0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Actor1_0: 244666146
+      Actor1_1: 1224799452
+      Actor1_10: 1642523394
+      Actor1_11: 790170090
+      Actor1_12: 303926672
+      Actor1_13: -2006244162
+      Actor1_14: 1054632748
+      Actor1_15: 1495001416
+      Actor1_16: -1400991304
+      Actor1_17: 758722934
+      Actor1_18: 510696617
+      Actor1_19: -323767445
+      Actor1_2: 47265585
+      Actor1_20: 703642000
+      Actor1_21: 1422898143
+      Actor1_22: -131078219
+      Actor1_23: 1737683415
+      Actor1_24: -55385543
+      Actor1_25: -389346337
+      Actor1_26: 106949230
+      Actor1_27: 1449110113
+      Actor1_28: -459439073
+      Actor1_29: -1149839917
+      Actor1_3: 1449799157
+      Actor1_30: 817895870
+      Actor1_31: 1944970267
+      Actor1_32: 1483294610
+      Actor1_33: -1043627206
+      Actor1_34: 2036631152
+      Actor1_35: 984302059
+      Actor1_36: -1124755840
+      Actor1_37: 141604536
+      Actor1_38: 896286627
+      Actor1_39: -105384939
+      Actor1_4: -914376212
+      Actor1_40: -1100027719
+      Actor1_41: -42965782
+      Actor1_42: -797146878
+      Actor1_43: -2122836684
+      Actor1_44: -546344630
+      Actor1_45: -200933281
+      Actor1_46: 220551022
+      Actor1_47: -1453525285
+      Actor1_48: 797279684
+      Actor1_49: -1804805615
+      Actor1_5: -1148553325
+      Actor1_50: -1238545804
+      Actor1_51: 691758551
+      Actor1_52: -1399171277
+      Actor1_53: 268055761
+      Actor1_54: 1329285527
+      Actor1_55: -1163151040
+      Actor1_56: -1118134728
+      Actor1_57: -763011349
+      Actor1_58: -1486063925
+      Actor1_59: -1847594876
+      Actor1_6: -173148492
+      Actor1_60: -1409428723
+      Actor1_61: -315073554
+      Actor1_62: 1625080285
+      Actor1_63: -674003562
+      Actor1_64: 366053582
+      Actor1_65: 54819417
+      Actor1_66: 740369667
+      Actor1_67: -1455879507
+      Actor1_68: 272600266
+      Actor1_69: 2074831864
+      Actor1_7: 1010702688
+      Actor1_70: -749009554
+      Actor1_71: 187512050
+      Actor1_72: 831310089
+      Actor1_73: -1326995280
+      Actor1_74: 1254142975
+      Actor1_75: -829599865
+      Actor1_76: -1094801622
+      Actor1_77: -239311922
+      Actor1_78: 1246785338
+      Actor1_79: -1776819016
+      Actor1_8: 1338345442
+      Actor1_80: -206496151
+      Actor1_81: 1500299383
+      Actor1_82: -54053174
+      Actor1_83: 428245821
+      Actor1_9: -1786248746
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
