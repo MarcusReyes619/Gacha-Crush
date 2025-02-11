@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,5 +32,15 @@ public class GameManager : MonoBehaviour
         IsGamePaused = pauseGame;
         Time.timeScale = IsGamePaused ? 0 : 1;
         Debug.Log("Game " + (IsGamePaused ? "Paused" : "Resumed"));
+    }
+
+    public void Start_BTN()
+    {
+        SceneManager.LoadScene("MainGameplay_Scene");
+    }
+
+    public void End_BTN()
+    {
+        Application.Quit();
     }
 }
