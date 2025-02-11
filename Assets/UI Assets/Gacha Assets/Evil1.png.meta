@@ -1,0 +1,824 @@
+fileFormatVersion: 2
+guid: a4f7189c85d22ee469624a5807fc486c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3751940759219888448
+    second: Evil1_0
+  - first:
+      213: -8584147635388525529
+    second: Evil1_1
+  - first:
+      213: 1539774159902983370
+    second: Evil1_2
+  - first:
+      213: 7182331661861684363
+    second: Evil1_3
+  - first:
+      213: 7220669539413603486
+    second: Evil1_4
+  - first:
+      213: 5087297386820604771
+    second: Evil1_5
+  - first:
+      213: 2396979817879235235
+    second: Evil1_6
+  - first:
+      213: -1121689705296858423
+    second: Evil1_7
+  - first:
+      213: 7342515635573268384
+    second: Evil1_8
+  - first:
+      213: 1703819977916461796
+    second: Evil1_9
+  - first:
+      213: -2505989759938554808
+    second: Evil1_10
+  - first:
+      213: 2374081792598142544
+    second: Evil1_11
+  - first:
+      213: -7167010973036690347
+    second: Evil1_12
+  - first:
+      213: 4649940411025054358
+    second: Evil1_13
+  - first:
+      213: -4246294506315803365
+    second: Evil1_14
+  - first:
+      213: 7772444216906177787
+    second: Evil1_15
+  - first:
+      213: -7675878061181718440
+    second: Evil1_16
+  - first:
+      213: -7171740656342595553
+    second: Evil1_17
+  - first:
+      213: -1696971035303587780
+    second: Evil1_18
+  - first:
+      213: -1661785273281341697
+    second: Evil1_19
+  - first:
+      213: -8672465022357616586
+    second: Evil1_20
+  - first:
+      213: -9078052791040835425
+    second: Evil1_21
+  - first:
+      213: 8824713176571545140
+    second: Evil1_22
+  - first:
+      213: 5187773339667778860
+    second: Evil1_23
+  - first:
+      213: -20292434583476485
+    second: Evil1_24
+  - first:
+      213: 9000309432569690873
+    second: Evil1_25
+  - first:
+      213: 1615679791879808738
+    second: Evil1_26
+  - first:
+      213: 5674567616920905229
+    second: Evil1_27
+  - first:
+      213: -8122423453039359274
+    second: Evil1_28
+  - first:
+      213: -553074731989749897
+    second: Evil1_29
+  - first:
+      213: 1303134655789134104
+    second: Evil1_30
+  - first:
+      213: -2993718193892504779
+    second: Evil1_31
+  - first:
+      213: -3350280715343059987
+    second: Evil1_32
+  - first:
+      213: -5574945440890831597
+    second: Evil1_33
+  - first:
+      213: 2153054720868638289
+    second: Evil1_34
+  - first:
+      213: -3653817963505292365
+    second: Evil1_35
+  - first:
+      213: 5537329503837425772
+    second: Evil1_36
+  - first:
+      213: 6748488496399303754
+    second: Evil1_37
+  - first:
+      213: 3544157882268513935
+    second: Evil1_38
+  - first:
+      213: 4383630180703629053
+    second: Evil1_39
+  - first:
+      213: 549161027766234847
+    second: Evil1_40
+  - first:
+      213: 5995625695251066024
+    second: Evil1_41
+  - first:
+      213: -6537743576798000573
+    second: Evil1_42
+  - first:
+      213: -3803509863784959750
+    second: Evil1_43
+  - first:
+      213: 8171607872849628087
+    second: Evil1_44
+  - first:
+      213: -8074362206169726670
+    second: Evil1_45
+  - first:
+      213: -3486032576694369402
+    second: Evil1_46
+  - first:
+      213: 2854581886788421064
+    second: Evil1_47
+  - first:
+      213: -7687995093078695516
+    second: Evil1_48
+  - first:
+      213: 93168365759863903
+    second: Evil1_49
+  - first:
+      213: 1054338592944409319
+    second: Evil1_50
+  - first:
+      213: -6505004210024339317
+    second: Evil1_51
+  - first:
+      213: 3186321835488010274
+    second: Evil1_52
+  - first:
+      213: -2509520276459017019
+    second: Evil1_53
+  - first:
+      213: 3229783970925483022
+    second: Evil1_54
+  - first:
+      213: -197225465382019856
+    second: Evil1_55
+  - first:
+      213: 500775985277868719
+    second: Evil1_56
+  - first:
+      213: -6143858520001221729
+    second: Evil1_57
+  - first:
+      213: 5649220872434889773
+    second: Evil1_58
+  - first:
+      213: 7120226866404823097
+    second: Evil1_59
+  - first:
+      213: -7570645982543377147
+    second: Evil1_60
+  - first:
+      213: 9004940572701595954
+    second: Evil1_61
+  - first:
+      213: 9042771119852121907
+    second: Evil1_62
+  - first:
+      213: -3568440201231446481
+    second: Evil1_63
+  - first:
+      213: -206518907655587441
+    second: Evil1_64
+  - first:
+      213: 4193981004448322369
+    second: Evil1_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Evil1_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 335
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce936412cd6eebc0800000000000000
+      internalID: -3751940759219888448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 335
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7245825d43bfed880800000000000000
+      internalID: -8584147635388525529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 335
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac4c75bb0706e5510800000000000000
+      internalID: 1539774159902983370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 335
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b848e44c794cca360800000000000000
+      internalID: 7182331661861684363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_4
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 335
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e943b3970b8f43460800000000000000
+      internalID: 7220669539413603486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 335
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36317380506b99640800000000000000
+      internalID: 5087297386820604771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_6
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 335
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aae872d178c34120800000000000000
+      internalID: 2396979817879235235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 335
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2719fe725fe60f0800000000000000
+      internalID: -1121689705296858423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_8
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 335
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af9818711bd5e560800000000000000
+      internalID: 7342515635573268384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_18
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 289
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c305a9695d52378e0800000000000000
+      internalID: -1696971035303587780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_28
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 241
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da894667ea574f80800000000000000
+      internalID: -8122423453039359274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_38
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 143
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86f380f0d06f2130800000000000000
+      internalID: 3544157882268513935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_39
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 143
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe65838c68c5dc30800000000000000
+      internalID: 4383630180703629053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_40
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 143
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdeae709b030f9700800000000000000
+      internalID: 549161027766234847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_41
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 143
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ace4abbdcdb43350800000000000000
+      internalID: 5995625695251066024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_42
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 143
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a0d58fad44545a0800000000000000
+      internalID: -6537743576798000573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_43
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 143
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af037654ee7373bc0800000000000000
+      internalID: -3803509863784959750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_44
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 95
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bbccf8b012676170800000000000000
+      internalID: 8171607872849628087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_45
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 95
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2310a617a5a12ff80800000000000000
+      internalID: -8074362206169726670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_52
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 47
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2206558d3d6183c20800000000000000
+      internalID: 3186321835488010274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Evil1_53
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 47
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc2505ca946c2dd0800000000000000
+      internalID: -2509520276459017019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1fed80c1ccd9a274b81c76a7c0adddd7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Evil1_0: -3751940759219888448
+      Evil1_1: -8584147635388525529
+      Evil1_18: -1696971035303587780
+      Evil1_2: 1539774159902983370
+      Evil1_28: -8122423453039359274
+      Evil1_3: 7182331661861684363
+      Evil1_38: 3544157882268513935
+      Evil1_39: 4383630180703629053
+      Evil1_4: 7220669539413603486
+      Evil1_40: 549161027766234847
+      Evil1_41: 5995625695251066024
+      Evil1_42: -6537743576798000573
+      Evil1_43: -3803509863784959750
+      Evil1_44: 8171607872849628087
+      Evil1_45: -8074362206169726670
+      Evil1_5: 5087297386820604771
+      Evil1_52: 3186321835488010274
+      Evil1_53: -2509520276459017019
+      Evil1_6: 2396979817879235235
+      Evil1_7: -1121689705296858423
+      Evil1_8: 7342515635573268384
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
