@@ -1,0 +1,1055 @@
+fileFormatVersion: 2
+guid: 7c3d2f31da4752545a363865d94ea611
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3018349275729755542
+    second: People3_0
+  - first:
+      213: -5602721250316767225
+    second: People3_1
+  - first:
+      213: 3759906064483153738
+    second: People3_2
+  - first:
+      213: -2957120935186744290
+    second: People3_3
+  - first:
+      213: 1654658960486405640
+    second: People3_4
+  - first:
+      213: -2846206893433153755
+    second: People3_5
+  - first:
+      213: -4424100502140315425
+    second: People3_6
+  - first:
+      213: 9050575656780220499
+    second: People3_7
+  - first:
+      213: -352584532667275561
+    second: People3_8
+  - first:
+      213: 5772779059502742854
+    second: People3_9
+  - first:
+      213: -8932707459246778557
+    second: People3_10
+  - first:
+      213: 1346466269353536242
+    second: People3_11
+  - first:
+      213: 5145300861202529168
+    second: People3_12
+  - first:
+      213: 3303586362701243808
+    second: People3_13
+  - first:
+      213: -4357568920625453420
+    second: People3_14
+  - first:
+      213: -6268383319509443746
+    second: People3_15
+  - first:
+      213: 6938641011969260851
+    second: People3_16
+  - first:
+      213: -911341956997875856
+    second: People3_17
+  - first:
+      213: -8013391256582686675
+    second: People3_18
+  - first:
+      213: 3364995153074986566
+    second: People3_19
+  - first:
+      213: -7216397113701682
+    second: People3_20
+  - first:
+      213: -6597743312329743400
+    second: People3_21
+  - first:
+      213: -1821737696931096640
+    second: People3_22
+  - first:
+      213: -7077813339682902171
+    second: People3_23
+  - first:
+      213: -511225335733886464
+    second: People3_24
+  - first:
+      213: 7674768168771194721
+    second: People3_25
+  - first:
+      213: 3678578985312572100
+    second: People3_26
+  - first:
+      213: 8653694958349557096
+    second: People3_27
+  - first:
+      213: -6984996235891354767
+    second: People3_28
+  - first:
+      213: 6367100603549290289
+    second: People3_29
+  - first:
+      213: -1397296870292926156
+    second: People3_30
+  - first:
+      213: -8145391060366701261
+    second: People3_31
+  - first:
+      213: 2612544474832074882
+    second: People3_32
+  - first:
+      213: 5503297734046181783
+    second: People3_33
+  - first:
+      213: -2495012970684643210
+    second: People3_34
+  - first:
+      213: 1051440128225201569
+    second: People3_35
+  - first:
+      213: -298449168310442140
+    second: People3_36
+  - first:
+      213: -1221399579394849773
+    second: People3_37
+  - first:
+      213: -1638255199410893059
+    second: People3_38
+  - first:
+      213: 1203479685981267505
+    second: People3_39
+  - first:
+      213: 5384579296172880701
+    second: People3_40
+  - first:
+      213: 3409927453605659126
+    second: People3_41
+  - first:
+      213: 3992782702635107456
+    second: People3_42
+  - first:
+      213: -7426411550699950730
+    second: People3_43
+  - first:
+      213: 7694948334883446476
+    second: People3_44
+  - first:
+      213: -684396415794448493
+    second: People3_45
+  - first:
+      213: 4993425212041958427
+    second: People3_46
+  - first:
+      213: -2996839319534567044
+    second: People3_47
+  - first:
+      213: -8178501377594909743
+    second: People3_48
+  - first:
+      213: -5769302768231639973
+    second: People3_49
+  - first:
+      213: -6451721513756877686
+    second: People3_50
+  - first:
+      213: 884309357082263710
+    second: People3_51
+  - first:
+      213: 4820230253970874291
+    second: People3_52
+  - first:
+      213: -8026209593792134634
+    second: People3_53
+  - first:
+      213: 3350952538027614527
+    second: People3_54
+  - first:
+      213: -1874157414184693884
+    second: People3_55
+  - first:
+      213: -6818978695120330398
+    second: People3_56
+  - first:
+      213: -8871320800237399694
+    second: People3_57
+  - first:
+      213: -3178345096421578348
+    second: People3_58
+  - first:
+      213: -3668911137169108828
+    second: People3_59
+  - first:
+      213: -6422154161795604933
+    second: People3_60
+  - first:
+      213: 1456000699451750023
+    second: People3_61
+  - first:
+      213: 3718834101230808424
+    second: People3_62
+  - first:
+      213: 8068217276497844179
+    second: People3_63
+  - first:
+      213: 7783096479064213004
+    second: People3_64
+  - first:
+      213: 3042229482802662032
+    second: People3_65
+  - first:
+      213: 7062574597913324308
+    second: People3_66
+  - first:
+      213: 4902345443220860657
+    second: People3_67
+  - first:
+      213: 8428877432153515532
+    second: People3_68
+  - first:
+      213: 2696610173350915195
+    second: People3_69
+  - first:
+      213: 5398475475508928352
+    second: People3_70
+  - first:
+      213: 1054908080530501700
+    second: People3_71
+  - first:
+      213: -9081087879966425270
+    second: People3_72
+  - first:
+      213: -125159628127889253
+    second: People3_73
+  - first:
+      213: 5550866479430771614
+    second: People3_74
+  - first:
+      213: 4481891913369179898
+    second: People3_75
+  - first:
+      213: 3293391230278264521
+    second: People3_76
+  - first:
+      213: -8783826204781122390
+    second: People3_77
+  - first:
+      213: 9217143798788370724
+    second: People3_78
+  - first:
+      213: -6032062618970629176
+    second: People3_79
+  - first:
+      213: -5641573536992915850
+    second: People3_80
+  - first:
+      213: 891897362048340411
+    second: People3_81
+  - first:
+      213: -3968631399779949216
+    second: People3_82
+  - first:
+      213: -5796834114192473554
+    second: People3_83
+  - first:
+      213: -193770827493385560
+    second: People3_84
+  - first:
+      213: -577401219687586755
+    second: People3_85
+  - first:
+      213: -2742431214683084664
+    second: People3_86
+  - first:
+      213: -4144557910941987604
+    second: People3_87
+  - first:
+      213: -6331116449675055404
+    second: People3_88
+  - first:
+      213: -1845507483692807102
+    second: People3_89
+  - first:
+      213: -3573339807148454318
+    second: People3_90
+  - first:
+      213: -6823859623572461434
+    second: People3_91
+  - first:
+      213: 8120188406678359239
+    second: People3_92
+  - first:
+      213: -6065241592797643817
+    second: People3_93
+  - first:
+      213: 3211984257648092032
+    second: People3_94
+  - first:
+      213: -9215210478408437772
+    second: People3_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: People3_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 336
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0073e0011753a3e43a082ab18686cb02
+      internalID: -1110217106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 336
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be732900f892a4a44b70675e9d7fb4f9
+      internalID: 1151238429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 336
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeac90ad05037a742b741f6f98581fe2
+      internalID: 1650507217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_3
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 336
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8332176fa83db47bd0084e5171f708
+      internalID: -1947975746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_4
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 336
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12979b21b5d4c934dae478d72253e748
+      internalID: 717668501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 336
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d22d92656a78a848835748aa8033914
+      internalID: -2072291914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 336
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6ff7b59dd2e4b4b914adfcb4a6e7d3
+      internalID: -813064959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 336
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b923fe91a1865547aee6e7008f3c8ce
+      internalID: 1650466117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_8
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 336
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41edabd4f9f268a4c87ed984546125ad
+      internalID: 1987907186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_9
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 336
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d45afa64674c174888ee443799b238a
+      internalID: -408872411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_10
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 336
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea60168655ef8d438decd89cb67caab
+      internalID: -345563202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_11
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 336
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a311bb9b3629ffc469fc8a2ef7c3b3b4
+      internalID: 1569591088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_48
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 144
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00aead73ca95964dae569b8e6e407bb
+      internalID: 1161473422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_49
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 144
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bb2d4bd27a773498befa5327059d30
+      internalID: 720485153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_50
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 144
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372927cc09ed98b43b5eaefe323fe3fc
+      internalID: -1106616789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_51
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 144
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b2180e4a7a3444ab4071366db56c47
+      internalID: 748840762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_52
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 144
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1cb9a97783465438616435a8c88cc1
+      internalID: -1800407863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_53
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 144
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dace04d272bbf4d9ac1bfbfe0bae80
+      internalID: 648564760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_54
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 144
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db8b88f297597b40b3e18103c09fcbb
+      internalID: 124887506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_55
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 144
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65ef21936009de4aa2aed1058b2e106
+      internalID: 1692106394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_56
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 144
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed6fa3f775f6ef44be94f676864fb3e
+      internalID: -578735056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_57
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 144
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0345eb3a9aa593746a6b7b68b35350f1
+      internalID: 1221477756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_58
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 144
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d6e7a584e09ce4a96c35e35f54edbd
+      internalID: 1720448406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People3_59
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 144
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409ae7d812ef550468fbb21dbbfcbde6
+      internalID: 1447740944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0560af52f573a47498e3505b33518716
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      People3_0: -1110217106
+      People3_1: 1151238429
+      People3_10: -345563202
+      People3_11: 1569591088
+      People3_12: -1337515323
+      People3_13: -1334481306
+      People3_14: -2036239603
+      People3_15: 780762500
+      People3_16: -390178614
+      People3_17: -701248897
+      People3_18: -1082763403
+      People3_19: 1136079724
+      People3_2: 1650507217
+      People3_20: 587381245
+      People3_21: -660646417
+      People3_22: 620366000
+      People3_23: -1079476452
+      People3_24: -348454513
+      People3_25: 24984463
+      People3_26: 713222600
+      People3_27: -592893462
+      People3_28: 1092740638
+      People3_29: -1084957638
+      People3_3: -1947975746
+      People3_30: -56489133
+      People3_31: -608475163
+      People3_32: -1389896243
+      People3_33: -1779890748
+      People3_34: -1634001136
+      People3_35: -1733750571
+      People3_36: -1338226666
+      People3_37: 1849534367
+      People3_38: -1902864292
+      People3_39: 29326911
+      People3_4: 717668501
+      People3_40: -352517599
+      People3_41: -185726355
+      People3_42: -522181665
+      People3_43: 273071259
+      People3_44: -991300432
+      People3_45: 527615426
+      People3_46: 1089080430
+      People3_47: -1220602545
+      People3_48: 1161473422
+      People3_49: 720485153
+      People3_5: -2072291914
+      People3_50: -1106616789
+      People3_51: 748840762
+      People3_52: -1800407863
+      People3_53: 648564760
+      People3_54: 124887506
+      People3_55: 1692106394
+      People3_56: -578735056
+      People3_57: 1221477756
+      People3_58: 1720448406
+      People3_59: 1447740944
+      People3_6: -813064959
+      People3_60: 180832418
+      People3_61: 1922632279
+      People3_62: 1374832772
+      People3_63: -286618255
+      People3_64: -1409158133
+      People3_65: -767527927
+      People3_66: -1948637463
+      People3_67: -403415194
+      People3_68: 795712383
+      People3_69: 790123966
+      People3_7: 1650466117
+      People3_70: -1871320754
+      People3_71: -572696939
+      People3_72: 1386230829
+      People3_73: -1397337275
+      People3_74: -317540487
+      People3_75: 1213105342
+      People3_76: -12442910
+      People3_77: 1783708939
+      People3_78: 1639973397
+      People3_79: 348566841
+      People3_8: 1987907186
+      People3_80: -1616084086
+      People3_81: 1746458350
+      People3_82: -518135950
+      People3_83: -1709520420
+      People3_84: 38370510
+      People3_85: 1779910314
+      People3_86: -664600417
+      People3_87: -1683416626
+      People3_88: 1627346321
+      People3_89: -830641919
+      People3_9: -408872411
+      People3_90: 270310012
+      People3_91: 553909544
+      People3_92: 682818018
+      People3_93: -1215797385
+      People3_94: 593707981
+      People3_95: 1757119990
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
