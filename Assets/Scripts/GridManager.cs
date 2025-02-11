@@ -7,7 +7,6 @@ public class GridManager : MonoBehaviour
     [SerializeField] private int width, height;
     [SerializeField] private Gem[] gemPrefabs;
 	[SerializeField] private Transform cameraTransform;
-
 	private Gem selectedObject;
 
     Gem[,] grid;
@@ -124,6 +123,7 @@ public class GridManager : MonoBehaviour
 		if (matchAmount >= 3)
 		{
 			print("match made!!!!");
+			
 		}
 	}
 

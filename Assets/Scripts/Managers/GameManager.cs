@@ -4,8 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public float timer { get; private set; }
-    public int score;
+    
+   
     [Header("Game State")]
     [SerializeField] private bool IsGamePaused = false;
 
@@ -30,15 +30,5 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game " + (IsGamePaused ? "Paused" : "Resumed"));
     }
     
-    public void AddToTime()
-    {
-
-    }
-
-    private void Update()
-    {
-        timer -= Time.deltaTime;
-    }
-
    
 }
