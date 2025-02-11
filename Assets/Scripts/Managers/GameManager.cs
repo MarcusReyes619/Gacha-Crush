@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     [Header("Game State")]
     [SerializeField] private bool IsGamePaused = false;
 
+    [Header("Scenes")]
+    [SerializeField] private string[] Scenes; // StartMenu, Lobby, Main Gameplay, Gacha, Gacha Gallery
+
     private void Awake()
     {
         // Singleton Pattern
@@ -29,6 +32,4 @@ public class GameManager : MonoBehaviour
         Time.timeScale = IsGamePaused ? 0 : 1;
         Debug.Log("Game " + (IsGamePaused ? "Paused" : "Resumed"));
     }
-    
-   
 }

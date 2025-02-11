@@ -78,7 +78,7 @@ public class GridManager : MonoBehaviour
 			selectedObject = null; //reset currently selected after
 
 			CheckMatch(posX, posY);
-			//CheckMatch((int)selectedPos.x, (int)selectedPos.y);
+			CheckMatch((int)selectedPos.x, (int)selectedPos.y);
 		}
 		else
 		{
@@ -122,9 +122,44 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
-			print("match made!!!!");
-			
+			MatchMade();
+		}
+		matchAmount = 1;
+
+		incrementAmount = 1;
+		while (true) // check down
+		{
+			if (y - incrementAmount < 0) break;
+
+			if (grid[x, y - incrementAmount].gemType == checkGemType)
+			{
+				matchAmount += 1;
+				incrementAmount += 1;
+			}
+			else break;
+		}
+
+		incrementAmount = 1;
+		while (true) // check up
+		{
+			if (y + incrementAmount == height) break;
+
+			if (grid[x, y + incrementAmount].gemType == checkGemType)
+			{
+				matchAmount += 1;
+				incrementAmount += 1;
+			}
+			else break;
+		}
+
+		if (matchAmount >= 3)
+		{
+			MatchMade();
 		}
 	}
 
+	private void MatchMade()
+	{
+		print("match made!!!");
+	}
 }
