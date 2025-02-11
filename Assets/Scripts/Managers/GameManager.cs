@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     [Header("Game State")]
     [SerializeField] private bool IsGamePaused = false;
 
+    [Header("Scenes")]
+    [SerializeField] private string[] Scenes; // StartMenu, Lobby, Main Gameplay, Gacha, Gacha Gallery
+
     private void Awake()
     {
         // Singleton Pattern
