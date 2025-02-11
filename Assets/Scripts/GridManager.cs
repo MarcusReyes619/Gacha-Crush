@@ -7,7 +7,10 @@ public class GridManager : MonoBehaviour
     [SerializeField] private int width, height;
     [SerializeField] private Gem[] gemPrefabs;
 	[SerializeField] private Transform cameraTransform;
+	[SerializeField] private float addTime;
 	private Gem selectedObject;
+
+	public float timer;
 
     Gem[,] grid;
 
@@ -155,11 +158,19 @@ public class GridManager : MonoBehaviour
 		if (matchAmount >= 3)
 		{
 			MatchMade();
+			
 		}
 	}
 
 	private void MatchMade()
 	{
 		print("match made!!!");
+		timer += addTime;
 	}
+
+    private void Update()
+    {
+		timer -= Time.deltaTime;
+
+    }
 }
