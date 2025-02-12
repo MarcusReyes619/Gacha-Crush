@@ -45,4 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsGamePaused: 0
-  Scenes: []
+  Scenes:
+  - TitleScreen_Scene
+  - Lobby_Scene
+  - MainGameplay_Scene

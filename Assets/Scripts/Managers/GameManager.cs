@@ -4,18 +4,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
-    
-   
+  
     [Header("Game State")]
     [SerializeField] private bool IsGamePaused = false;
 
-    [Header("Scenes")]
-    [SerializeField] private string[] Scenes; // StartMenu, Lobby, Main Gameplay, Gacha, Gacha Gallery
-
     private void Awake()
     {
-        // Singleton Pattern
         if (instance == null)
         {
             instance = this;
@@ -34,9 +28,19 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game " + (IsGamePaused ? "Paused" : "Resumed"));
     }
 
-    public void Start_BTN()
+    public void Load_GameplayScene()
     {
         SceneManager.LoadScene("MainGameplay_Scene");
+    }
+
+    public void Load_GachaScene()
+    {
+        SceneManager.LoadScene("Gacha_Scene");
+    }
+
+    public void Load_TitleScene()
+    {
+        SceneManager.LoadScene("TitleScreen_Scene");
     }
 
     public void End_BTN()
