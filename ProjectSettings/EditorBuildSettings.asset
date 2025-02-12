@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/TitleScreen_Scene.unity
+    guid: eda5c2e11ff3bfd4d86fe3d29d31d209
+  - enabled: 1
+    path: Assets/Scenes/MainGameplay_Scene.unity
+    guid: 49e7f33919c41374dabf8de47477fc3c
+  - enabled: 1
+    path: Assets/Scenes/Gacha_Scene.unity
+    guid: a1031fa041baa8844883fc6ca91ae7b7
+  - enabled: 1
+    path: Assets/Scenes/Collection_Scene.unity
+    guid: 2a0abc4c591f8e145860c34cb78f818d
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 109258e7d7d05074c95706ec670ff7c3, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

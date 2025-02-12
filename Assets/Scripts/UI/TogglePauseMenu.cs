@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TogglePauseMenu : MonoBehaviour
 {
@@ -18,9 +19,9 @@ public class TogglePauseMenu : MonoBehaviour
 
     public void Open_PauseMenu()
     {
+        PauseMenu_UI.SetActive(true);
         Pause_SFX.Play();
 
-        PauseMenu_UI.SetActive(true);
         GameManager.instance.PauseGame(true);
     }
 
@@ -32,10 +33,16 @@ public class TogglePauseMenu : MonoBehaviour
         GameManager.instance.PauseGame(false);
     }
 
+    public void Load_CollectionScene()
+    {
+        SceneManager.LoadScene("Collection_Scene");
+    }
+
     public void Load_MainMenu()
     {
         Exit_SFX.Play();
 
         // Load Lobby Scene
+        GameManager.instance.Load_TitleScene();
     }
 }
