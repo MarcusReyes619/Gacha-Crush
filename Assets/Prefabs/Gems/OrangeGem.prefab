@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3061898348292061549}
   - component: {fileID: 2294780511039890914}
   - component: {fileID: 3801918682193748417}
-  - component: {fileID: -4726068032418260390}
+  - component: {fileID: -7085392737518744267}
+  - component: {fileID: 6179219210335005290}
   m_Layer: 0
-  m_Name: PurpleGem
+  m_Name: OrangeGem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1177906315, guid: de531189cb94dfd429047a44568390cc, type: 3}
+  m_Sprite: {fileID: -1423685429, guid: ca94f8eb9a17f4c45a9afd14c7f2475a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,9 +102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884390cbdb78b5d44af039db0ce266af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemType: 3
+  gemType: 2
   sprite: {fileID: 2294780511039890914}
---- !u!61 &-4726068032418260390
+--- !u!61 &-7085392737518744267
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,3 +150,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &6179219210335005290
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3180089894742263830}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 48c0da2b2df4c914688415e59cb3e77a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
