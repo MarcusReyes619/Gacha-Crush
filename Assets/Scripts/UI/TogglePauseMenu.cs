@@ -33,6 +33,11 @@ public class TogglePauseMenu : MonoBehaviour
         GameManager.instance.PauseGame(false);
     }
 
+    public void Load_CollectionScene()
+    {
+        SceneManager.LoadScene("Collection_Scene");
+    }
+
     public void Load_MainMenu()
     {
         Exit_SFX.Play();

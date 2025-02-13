@@ -22,6 +22,11 @@ public class SwitchScene_Manager : MonoBehaviour
     {
         SceneManager.LoadScene("TitleScreen_Scene");
     }
+    
+    public void Load_CollectionScene()
+    {
+        SceneManager.LoadScene("Collection_Scene");
+    }
 
     public void Quit_Game()
     {

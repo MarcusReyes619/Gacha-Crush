@@ -5,20 +5,26 @@ public class GridManager : MonoBehaviour
 {
     [SerializeField] private int spacing = 1;
     [SerializeField] private int width, height;
-    [SerializeField] private Gem[] gemPrefabs;
+    [SerializeField] private GameObject[] gemPrefabs;
 	[SerializeField] private Transform cameraTransform;
 	[SerializeField] private float addTime;
-	private Gem selectedObject;
+	private GameObject selectedObject;
 
 	public float timer;
 
-    Gem[,] grid;
+    GameObject[,] grid;
 
     void Start()
     {
         GenerateGrid();
 		SetCameraTransform();
     }
+
+	private void Update()
+	{
+		timer -= Time.deltaTime;
+
+	}
 
 	private void SetCameraTransform() // center camera
 	{
@@ -27,7 +33,7 @@ public class GridManager : MonoBehaviour
 
     private void GenerateGrid() // width x height
     {
-		grid = new Gem[width, height];
+		grid = new GameObject[width, height];
 
         for (int x = 0; x < width; x++)
         {
@@ -94,17 +100,26 @@ public class GridManager : MonoBehaviour
 	{
 		int matchAmount = 1;
 		int incrementAmount = 1;
-		List<Vector2> coordinates = new List<Vector2>();
+		List<Vector2Int> coordinates = new List<Vector2Int>();
+		
+		Gem getGemClass = grid[x, y].GetComponent<Gem>();
+		GemType checkGemType = getGemClass.gemType;
 
-		GemType checkGemType = grid[x, y].gemType;
+		coordinates.Add(new Vector2Int(x, y));
 
 		while (true) // check left
 		{
 			if (x - incrementAmount < 0) break;
 
-			if (grid[x - incrementAmount, y].gemType == checkGemType)
+			if (grid[x - incrementAmount, y])
+			{
+				getGemClass = grid[x - incrementAmount, y].GetComponent<Gem>();
+			}
+			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
+				coordinates.Add(new Vector2Int(x - incrementAmount, y));
+
 				incrementAmount += 1;
 			}
 			else break;
@@ -115,9 +130,15 @@ public class GridManager : MonoBehaviour
 		{
 			if (x + incrementAmount == width) break;
 
-			if (grid[x + incrementAmount, y].gemType == checkGemType)
+			if (grid[x + incrementAmount, y])
+			{
+				getGemClass = grid[x + incrementAmount, y].GetComponent<Gem>();
+			}
+			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
+				coordinates.Add(new Vector2Int(x + incrementAmount, y));
+
 				incrementAmount += 1;
 			}
 			else break;
@@ -125,7 +146,7 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
-			MatchMade();
+			MatchMade(coordinates);
 		}
 		matchAmount = 1;
 
@@ -134,9 +155,15 @@ public class GridManager : MonoBehaviour
 		{
 			if (y - incrementAmount < 0) break;
 
-			if (grid[x, y - incrementAmount].gemType == checkGemType)
+			if (grid[x, y - incrementAmount])
+			{
+				getGemClass = grid[x, y - incrementAmount].GetComponent<Gem>();
+			}
+			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
+				coordinates.Add(new Vector2Int(x, y - incrementAmount));
+
 				incrementAmount += 1;
 			}
 			else break;
@@ -147,9 +174,15 @@ public class GridManager : MonoBehaviour
 		{
 			if (y + incrementAmount == height) break;
 
-			if (grid[x, y + incrementAmount].gemType == checkGemType)
+			if (grid[x, y + incrementAmount])
+			{
+				getGemClass = grid[x, y + incrementAmount].GetComponent<Gem>();
+			}
+			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
+				coordinates.Add(new Vector2Int(x, y + incrementAmount));
+
 				incrementAmount += 1;
 			}
 			else break;
@@ -157,20 +190,46 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
-			MatchMade();
-			
+			MatchMade(coordinates);
 		}
 	}
 
-	private void MatchMade()
+	private void MatchMade(List<Vector2Int> coordinates)
 	{
 		print("match made!!!");
 		timer += addTime;
+		DeleteMatchedGems(coordinates);
 	}
 
-    private void Update()
-    {
-		timer -= Time.deltaTime;
+	private void DeleteMatchedGems(List<Vector2Int> coordinates)
+	{
+		foreach (Vector2Int coordinate in coordinates)
+		{
+			Destroy(grid[coordinate.x, coordinate.y]); //play destroy animation here which calls drop higher gems
+			grid[coordinate.x, coordinate.y] = null;
+		}
 
-    }
+		DropHigherGems(coordinates);
+	}
+
+	private void DropHigherGems(List<Vector2Int> coordinates)
+	{
+		foreach (Vector2Int coordinate in coordinates)
+		{
+			for (int y = coordinate.y; y < height; y++)
+			{
+				if (grid[coordinate.x, y] == null) continue;
+
+				if (grid[coordinate.x, y]) SendDownGem(coordinate);
+			}
+		}
+	}
+
+	private void SendDownGem(Vector2Int coordinate)
+	{
+		if (grid[coordinate.x, coordinate.y - 1] == null)
+		{
+			grid[coordinate.x, coordinate.y - 1] = grid[coordinate.x, coordinate.y];
+		}
+	}
 }
