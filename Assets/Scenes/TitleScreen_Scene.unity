@@ -585,6 +585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TitleScreen_Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 4004593330932292635, guid: 92381aa12944e94448cf4d309026f0f8, type: 3}
+      propertyPath: m_text
+      value: GEM
+      objectReference: {fileID: 0}
     - target: {fileID: 5310933422090644536, guid: 92381aa12944e94448cf4d309026f0f8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -689,6 +693,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6293167835856585291, guid: 92381aa12944e94448cf4d309026f0f8, type: 3}
+      propertyPath: m_Name
+      value: Gem_BTN
+      objectReference: {fileID: 0}
     - target: {fileID: 6430944904000189636, guid: 92381aa12944e94448cf4d309026f0f8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -723,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7510075148857578940, guid: 92381aa12944e94448cf4d309026f0f8, type: 3}
       propertyPath: m_Spacing
-      value: 125
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7510075148857578940, guid: 92381aa12944e94448cf4d309026f0f8, type: 3}
       propertyPath: m_Padding.m_Top
@@ -778,7 +786,8 @@ PrefabInstance:
       value: SwitchScene_Manager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1512859272994673172, guid: 92381aa12944e94448cf4d309026f0f8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3039993414316571527, guid: 92381aa12944e94448cf4d309026f0f8, type: 3}
