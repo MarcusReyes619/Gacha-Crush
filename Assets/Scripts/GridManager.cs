@@ -111,7 +111,7 @@ public class GridManager : MonoBehaviour
 		{
 			if (x - incrementAmount < 0) break;
 
-			if (grid[x - incrementAmount, y])
+			if (grid[x - incrementAmount, y] != null)
 			{
 				getGemClass = grid[x - incrementAmount, y].GetComponent<Gem>();
 			}
@@ -130,7 +130,7 @@ public class GridManager : MonoBehaviour
 		{
 			if (x + incrementAmount == width) break;
 
-			if (grid[x + incrementAmount, y])
+			if (grid[x + incrementAmount, y] != null)
 			{
 				getGemClass = grid[x + incrementAmount, y].GetComponent<Gem>();
 			}
@@ -148,14 +148,18 @@ public class GridManager : MonoBehaviour
 		{
 			MatchMade(coordinates);
 		}
-		matchAmount = 1;
+
+		// Clear values for up/down check
+		matchAmount = 1; 
+		coordinates.Clear();
+		coordinates.Add(new Vector2Int(x, y));
 
 		incrementAmount = 1;
 		while (true) // check down
 		{
 			if (y - incrementAmount < 0) break;
 
-			if (grid[x, y - incrementAmount])
+			if (grid[x, y - incrementAmount] != null)
 			{
 				getGemClass = grid[x, y - incrementAmount].GetComponent<Gem>();
 			}
@@ -174,7 +178,7 @@ public class GridManager : MonoBehaviour
 		{
 			if (y + incrementAmount == height) break;
 
-			if (grid[x, y + incrementAmount])
+			if (grid[x, y + incrementAmount] != null)
 			{
 				getGemClass = grid[x, y + incrementAmount].GetComponent<Gem>();
 			}
