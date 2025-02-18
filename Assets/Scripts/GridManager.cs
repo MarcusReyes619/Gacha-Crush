@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private int spacing = 1;
+    [SerializeField] private float scale = 1;
     [SerializeField] private int width, height;
-    [SerializeField] private GameObject[] gemPrefabs;
 	[SerializeField] private Transform cameraTransform;
+    [SerializeField] private GameObject[] gemPrefabs;
 	[SerializeField] private float addTime;
 	private GameObject selectedObject;
 
@@ -29,7 +29,6 @@ public class GridManager : MonoBehaviour
 	{
 		UpdateTimer();
 	}
-
 	private void UpdateTimer()
 	{
 		timer -= Time.deltaTime;
@@ -44,41 +43,45 @@ public class GridManager : MonoBehaviour
     private void GenerateGrid() // width x height
     {
 		grid = new GameObject[width, height];
+		int currentUIImage = 0;
 
         for (int x = 0; x < width; x++)
         {
 			for (int y = 0; y < height; y++)
 			{
-                GenerateGem(x, y);
+                GenerateGem(x, y, currentUIImage);
+				currentUIImage++;
 			}
 		}
     }
 
-	private void GenerateGem(int x, int y)
+	private void GenerateGem(int x, int y, int currentUIImage)
 	{
 		GemType gemType = (GemType)Random.Range(0, 6);
 
 		switch (gemType)
 		{
 			case GemType.Blue:
-				grid[x, y] = Instantiate(gemPrefabs[0], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[0], new Vector3(x * scale, y * scale), Quaternion.identity);
 				break;
 			case GemType.Green:
-				grid[x, y] = Instantiate(gemPrefabs[1], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[1], new Vector3(x * scale, y * scale), Quaternion.identity);
 				break;
 			case GemType.Orange:
-				grid[x, y] = Instantiate(gemPrefabs[2], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[2], new Vector3(x * scale, y * scale), Quaternion.identity);
 				break;
 			case GemType.Purple:
-				grid[x, y] = Instantiate(gemPrefabs[3], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[3], new Vector3(x * scale, y * scale), Quaternion.identity);
 				break;
 			case GemType.Red:
-				grid[x, y] = Instantiate(gemPrefabs[4], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[4], new Vector3(x * scale, y * scale), Quaternion.identity);
 				break;
 			case GemType.Teal:
-				grid[x, y] = Instantiate(gemPrefabs[5], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[5], new Vector3(x * scale, y * scale), Quaternion.identity);
 				break;
 		}
+
+		grid[x, y].transform.localScale = Vector3.one * scale;
 	}
 
 	public void SelectObject(int posX, int posY)
@@ -121,10 +124,12 @@ public class GridManager : MonoBehaviour
 		{
 			if (x - incrementAmount < 0) break;
 
-			if (grid[x - incrementAmount, y])
+			if (grid[x - incrementAmount, y] != null)
 			{
 				getGemClass = grid[x - incrementAmount, y].GetComponent<Gem>();
 			}
+			else break;
+
 			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
@@ -140,10 +145,12 @@ public class GridManager : MonoBehaviour
 		{
 			if (x + incrementAmount == width) break;
 
-			if (grid[x + incrementAmount, y])
+			if (grid[x + incrementAmount, y] != null)
 			{
 				getGemClass = grid[x + incrementAmount, y].GetComponent<Gem>();
 			}
+			else break;
+
 			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
@@ -158,17 +165,23 @@ public class GridManager : MonoBehaviour
 		{
 			MatchMade(coordinates);
 		}
-		matchAmount = 1;
+
+		// Clear values for up/down check
+		matchAmount = 1; 
+		coordinates.Clear();
+		coordinates.Add(new Vector2Int(x, y));
 
 		incrementAmount = 1;
 		while (true) // check down
 		{
 			if (y - incrementAmount < 0) break;
 
-			if (grid[x, y - incrementAmount])
+			if (grid[x, y - incrementAmount] != null)
 			{
 				getGemClass = grid[x, y - incrementAmount].GetComponent<Gem>();
 			}
+			else break;
+
 			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
@@ -184,10 +197,12 @@ public class GridManager : MonoBehaviour
 		{
 			if (y + incrementAmount == height) break;
 
-			if (grid[x, y + incrementAmount])
+			if (grid[x, y + incrementAmount] != null)
 			{
 				getGemClass = grid[x, y + incrementAmount].GetComponent<Gem>();
 			}
+			else break;
+
 			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
@@ -230,16 +245,25 @@ public class GridManager : MonoBehaviour
 			{
 				if (grid[coordinate.x, y] == null) continue;
 
-				if (grid[coordinate.x, y]) SendDownGem(coordinate);
+				if (grid[coordinate.x, y]) SendDownGem(new Vector2Int(coordinate.x, y));
 			}
 		}
 	}
 
 	private void SendDownGem(Vector2Int coordinate)
 	{
-		if (grid[coordinate.x, coordinate.y - 1] == null)
+		for (int y = coordinate.y; y > 0; y--) //stop when selecting the bottom slot
 		{
-			grid[coordinate.x, coordinate.y - 1] = grid[coordinate.x, coordinate.y];
+			if (grid[coordinate.x, y - 1] == null)
+			{
+				// set lower null space equal to current higher gem and update position accordingly
+				grid[coordinate.x, y - 1] = grid[coordinate.x, y];
+				grid[coordinate.x, y - 1].transform.position = new Vector3(coordinate.x, y - 1);
+
+				// set null as the current higher gem has been moved down
+				grid[coordinate.x, y] = null;
+			}
+			else return;
 		}
 	}
 }
