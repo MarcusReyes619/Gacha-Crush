@@ -115,6 +115,8 @@ public class GridManager : MonoBehaviour
 			{
 				getGemClass = grid[x - incrementAmount, y].GetComponent<Gem>();
 			}
+			else break;
+
 			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
@@ -134,6 +136,8 @@ public class GridManager : MonoBehaviour
 			{
 				getGemClass = grid[x + incrementAmount, y].GetComponent<Gem>();
 			}
+			else break;
+
 			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
@@ -163,6 +167,8 @@ public class GridManager : MonoBehaviour
 			{
 				getGemClass = grid[x, y - incrementAmount].GetComponent<Gem>();
 			}
+			else break;
+
 			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
@@ -182,6 +188,8 @@ public class GridManager : MonoBehaviour
 			{
 				getGemClass = grid[x, y + incrementAmount].GetComponent<Gem>();
 			}
+			else break;
+
 			if (getGemClass.gemType == checkGemType)
 			{
 				matchAmount += 1;
