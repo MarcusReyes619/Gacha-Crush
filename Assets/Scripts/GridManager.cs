@@ -27,7 +27,12 @@ public class GridManager : MonoBehaviour
 
 	private void Update()
 	{
+		UpdateTimer();
+	}
+	private void UpdateTimer()
+	{
 		timer -= Time.deltaTime;
+		TimerSlider_UI.value = timer;
 	}
 
 	private void SetCameraTransform() // center camera
