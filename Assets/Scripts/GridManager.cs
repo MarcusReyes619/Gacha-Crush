@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class GridManager : MonoBehaviour
 	private GameObject selectedObject;
 
 	public float timer;
+
+	[Header("UI")]
+	[SerializeField] private Slider TimerSlider_UI;
 
     GameObject[,] grid;
 
