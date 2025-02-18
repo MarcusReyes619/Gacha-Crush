@@ -20,4 +20,6 @@ public class ScroeData : ScriptableObject
     {
         score -= function;
     }
+
+   
 }
