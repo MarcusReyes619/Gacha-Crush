@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
@@ -23,7 +24,6 @@ public class GridManager : MonoBehaviour
 	private void Update()
 	{
 		timer -= Time.deltaTime;
-
 	}
 
 	private void SetCameraTransform() // center camera
@@ -220,16 +220,25 @@ public class GridManager : MonoBehaviour
 			{
 				if (grid[coordinate.x, y] == null) continue;
 
-				if (grid[coordinate.x, y]) SendDownGem(coordinate);
+				if (grid[coordinate.x, y]) SendDownGem(new Vector2Int(coordinate.x, y));
 			}
 		}
 	}
 
 	private void SendDownGem(Vector2Int coordinate)
 	{
-		if (grid[coordinate.x, coordinate.y - 1] == null)
+		for (int y = coordinate.y; y > 0; y--) //stop when selecting the bottom slot
 		{
-			grid[coordinate.x, coordinate.y - 1] = grid[coordinate.x, coordinate.y];
+			if (grid[coordinate.x, y - 1] == null)
+			{
+				// set lower null space equal to current higher gem and update position accordingly
+				grid[coordinate.x, y - 1] = grid[coordinate.x, y];
+				grid[coordinate.x, y - 1].transform.position = new Vector3(coordinate.x, y - 1);
+
+				// set null as the current higher gem has been moved down
+				grid[coordinate.x, y] = null;
+			}
+			else return;
 		}
 	}
 }
