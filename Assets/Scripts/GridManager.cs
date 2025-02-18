@@ -8,8 +8,8 @@ public class GridManager : MonoBehaviour
     [SerializeField] private int spacing = 1;
     [SerializeField] private int width, height;
     [SerializeField] private GameObject[] gemPrefabs;
-	[SerializeField] private Transform cameraTransform;
 	[SerializeField] private float addTime;
+	[SerializeField] private GameObject UIParent;
 	private GameObject selectedObject;
 
 	public float timer;
@@ -37,47 +37,55 @@ public class GridManager : MonoBehaviour
 
 	private void SetCameraTransform() // center camera
 	{
-		cameraTransform.position = new Vector3(width / 2, height / 2, -10);
+		//cameraTransform.position = new Vector3(width / 2, height / 2, -10);
 	}
 
     private void GenerateGrid() // width x height
     {
 		grid = new GameObject[width, height];
+		int currentUIImage = 0;
 
         for (int x = 0; x < width; x++)
         {
 			for (int y = 0; y < height; y++)
 			{
-                GenerateGem(x, y);
+                GenerateGem(x, y, currentUIImage);
+				currentUIImage++;
 			}
 		}
     }
 
-	private void GenerateGem(int x, int y)
+	private void GenerateGem(int x, int y, int currentUIImage)
 	{
 		GemType gemType = (GemType)Random.Range(0, 6);
 
 		switch (gemType)
 		{
 			case GemType.Blue:
-				grid[x, y] = Instantiate(gemPrefabs[0], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[0], new Vector3(x, y, 2), Quaternion.identity);
 				break;
 			case GemType.Green:
-				grid[x, y] = Instantiate(gemPrefabs[1], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[1], new Vector3(x, y, 2), Quaternion.identity);
 				break;
 			case GemType.Orange:
-				grid[x, y] = Instantiate(gemPrefabs[2], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[2], new Vector3(x, y, 2), Quaternion.identity);
 				break;
 			case GemType.Purple:
-				grid[x, y] = Instantiate(gemPrefabs[3], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[3], new Vector3(x, y, 2), Quaternion.identity);
 				break;
 			case GemType.Red:
-				grid[x, y] = Instantiate(gemPrefabs[4], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[4], new Vector3(x, y, 2), Quaternion.identity);
 				break;
 			case GemType.Teal:
-				grid[x, y] = Instantiate(gemPrefabs[5], new Vector3(x, y), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[5], new Vector3(x, y, 2), Quaternion.identity);
 				break;
 		}
+
+		SpriteRenderer spriteRenderer = grid[x, y].GetComponent<SpriteRenderer>(); // get gem image of what was just generated
+
+		GameObject parent = UIParent.transform.GetChild(currentUIImage).gameObject; // 
+		Image imageChild = parent.GetComponent<Image>();
+		imageChild.sprite = spriteRenderer.sprite;
 	}
 
 	public void SelectObject(int posX, int posY)
