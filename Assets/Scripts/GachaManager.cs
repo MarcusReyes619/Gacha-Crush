@@ -14,6 +14,9 @@ public class GachaManager : MonoBehaviour
     public List<Sprite> AllBorders = new List<Sprite>();
     public PlayerData playerData;
     public Button pullButton;
+    public AudioSource audioSource;
+    public AudioClip rollSound;
+    public AudioClip LegendarySound;
 
     private bool pulling = false;
     private float pt = 0;
@@ -27,10 +30,16 @@ public class GachaManager : MonoBehaviour
             {
                 Pull();
                 pc--;
+                audioSource.pitch = Random.Range(0.8f, 1.2f);
+                audioSource.PlayOneShot(rollSound);
+                
                 if (pc < 0)
                 {
                     pulling = false;
-                    playerData.OwnedItems.Add(Pull());
+                    GachaItem item = Pull();
+                   
+                    playerData.OwnedItems.Add(item);
+                    if (item.Rarity == Rarity.Legendary) audioSource.PlayOneShot(LegendarySound);
                     pullButton.interactable = true;
                 }
                 else
