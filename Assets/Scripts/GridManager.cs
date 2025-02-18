@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
 {
@@ -12,6 +14,9 @@ public class GridManager : MonoBehaviour
 
 	public float timer;
 
+	[Header("UI")]
+	[SerializeField] private Slider TimerSlider_UI;
+
     GameObject[,] grid;
 
     void Start()
@@ -22,8 +27,13 @@ public class GridManager : MonoBehaviour
 
 	private void Update()
 	{
-		timer -= Time.deltaTime;
+		UpdateTimer();
+	}
 
+	private void UpdateTimer()
+	{
+		timer -= Time.deltaTime;
+		TimerSlider_UI.value = timer;
 	}
 
 	private void SetCameraTransform() // center camera
