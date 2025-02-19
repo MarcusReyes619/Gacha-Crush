@@ -27,13 +27,14 @@ public class GridManager : MonoBehaviour
 		SetGemHolderTransform();
 		GenerateGrid();
 		SetCameraTransform();
-		
     }
 
 	private void Update()
 	{
-		UpdateTimer();
+		if (!GameManager.instance.IsGamePaused)
+			UpdateTimer();
 	}
+
 	private void UpdateTimer()
 	{
 		timer -= Time.deltaTime;
