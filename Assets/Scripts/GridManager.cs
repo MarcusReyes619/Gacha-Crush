@@ -19,7 +19,10 @@ public class GridManager : MonoBehaviour
 
 	[Header("UI")]
 	[SerializeField] private Slider TimerSlider_UI;
+	[SerializeField] private TMP_Text scoreText;
+	[SerializeField] private ScoreData scoreData;
 
+	private int scoreMult;
     GameObject[,] grid;
 
     void Start()
@@ -27,7 +30,7 @@ public class GridManager : MonoBehaviour
 		SetGemHolderTransform();
 		GenerateGrid();
 		SetCameraTransform();
-		
+		scoreData.Subscribe(UpdateScoreUI);
     }
 
 	private void Update()
@@ -189,7 +192,8 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
-			matchCoordinates.AddRange(MatchMade(coordinates));
+            scoreMult = matchAmount - 3;
+            matchCoordinates.AddRange(MatchMade(coordinates));
 		}
 
 		// Clear values for up/down check
@@ -241,6 +245,7 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
+			scoreMult = matchAmount - 3;
 			matchCoordinates.AddRange(MatchMade(coordinates));
 		}
 
@@ -250,11 +255,17 @@ public class GridManager : MonoBehaviour
 	private List<Vector2Int> MatchMade(List<Vector2Int> coordinates)
 	{
 		print("match made!!!");
+		scoreData.Add(scoreMult > 0 ? 100 * scoreMult : 100);
 		timer += addTime;
 		return DeleteMatchedGems(coordinates);
 	}
 
-	private List<Vector2Int> DeleteMatchedGems(List<Vector2Int> coordinates)
+    private void UpdateScoreUI(int newScore)
+    {
+        scoreText.text = "Score: " + newScore;
+    }
+
+    private List<Vector2Int> DeleteMatchedGems(List<Vector2Int> coordinates)
 	{
 		foreach (Vector2Int coordinate in coordinates)
 		{

@@ -1796,6 +1796,8 @@ MonoBehaviour:
   addTime: 3
   timer: 30
   TimerSlider_UI: {fileID: 877630369}
+  scoreText: {fileID: 369226168}
+  scoreData: {fileID: 11400000, guid: 07b6686d49c6c544e951728ec137a0c9, type: 2}
 --- !u!4 &1735919216
 Transform:
   m_ObjectHideFlags: 0
