@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -107,8 +108,12 @@ public class GridManager : MonoBehaviour
 
 			selectedObject = null; //reset currently selected after
 
-			CheckMatch(posX, posY);
-			CheckMatch((int)selectedPos.x, (int)selectedPos.y);
+			List<Vector2Int> firstMatchCoordinates = CheckMatch(posX, posY);
+			firstMatchCoordinates.AddRange(CheckMatch((int)selectedPos.x, (int)selectedPos.y));
+
+			DropHigherGems(firstMatchCoordinates);
+			//list of both added together
+			//drop higher gems
 		}
 		else
 		{
@@ -117,12 +122,14 @@ public class GridManager : MonoBehaviour
 		}
 	}
 
-	private void CheckMatch(int x, int y)
+	private List<Vector2Int> CheckMatch(int x, int y)
 	{
 		int matchAmount = 1;
 		int incrementAmount = 1;
 		List<Vector2Int> coordinates = new List<Vector2Int>();
-		
+
+		List<Vector2Int> matchCoordinates = new List<Vector2Int>();
+
 		Gem getGemClass = grid[x, y].GetComponent<Gem>();
 		GemType checkGemType = getGemClass.gemType;
 
@@ -171,7 +178,7 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
-			MatchMade(coordinates);
+			matchCoordinates.AddRange(MatchMade(coordinates));
 		}
 
 		// Clear values for up/down check
@@ -223,18 +230,20 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
-			MatchMade(coordinates);
+			matchCoordinates.AddRange(MatchMade(coordinates));
 		}
+
+		return matchCoordinates;
 	}
 
-	private void MatchMade(List<Vector2Int> coordinates)
+	private List<Vector2Int> MatchMade(List<Vector2Int> coordinates)
 	{
 		print("match made!!!");
 		timer += addTime;
-		DeleteMatchedGems(coordinates);
+		return DeleteMatchedGems(coordinates);
 	}
 
-	private void DeleteMatchedGems(List<Vector2Int> coordinates)
+	private List<Vector2Int> DeleteMatchedGems(List<Vector2Int> coordinates)
 	{
 		foreach (Vector2Int coordinate in coordinates)
 		{
@@ -242,7 +251,7 @@ public class GridManager : MonoBehaviour
 			grid[coordinate.x, coordinate.y] = null;
 		}
 
-		DropHigherGems(coordinates);
+		return coordinates;
 	}
 
 	private void DropHigherGems(List<Vector2Int> coordinates)
