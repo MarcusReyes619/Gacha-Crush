@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private float scale = 1;
-    [SerializeField] private int width, height;
+    [SerializeField] private float spacingScale = 1;
+	[SerializeField] private float imageScale = 1;
+	[SerializeField] private int width, height;
 	[SerializeField] private Transform cameraTransform;
-    [SerializeField] private GameObject[] gemPrefabs;
+	[SerializeField] private Transform gemHolderTransform;
+	[SerializeField] private GameObject[] gemPrefabs;
 	[SerializeField] private float addTime;
 	private GameObject selectedObject;
 
@@ -23,6 +25,7 @@ public class GridManager : MonoBehaviour
     {
         GenerateGrid();
 		SetCameraTransform();
+		SetGemHolderTransform();
     }
 
 	private void Update()
@@ -37,10 +40,15 @@ public class GridManager : MonoBehaviour
 
 	private void SetCameraTransform() // center camera
 	{
-		cameraTransform.position = new Vector3(width / 2, height / 2, -10);
+		//cameraTransform.position = new Vector3(width / 2, height / 2, -10);
 	}
 
-    private void GenerateGrid() // width x height
+	private void SetGemHolderTransform() // scale objects
+	{
+		gemHolderTransform.localScale = new Vector3(1 * spacingScale, 1 * spacingScale);
+	}
+
+	private void GenerateGrid() // width x height
     {
 		grid = new GameObject[width, height];
 		int currentUIImage = 0;
@@ -62,26 +70,26 @@ public class GridManager : MonoBehaviour
 		switch (gemType)
 		{
 			case GemType.Blue:
-				grid[x, y] = Instantiate(gemPrefabs[0], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[0], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
 				break;
 			case GemType.Green:
-				grid[x, y] = Instantiate(gemPrefabs[1], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[1], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
 				break;
 			case GemType.Orange:
-				grid[x, y] = Instantiate(gemPrefabs[2], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[2], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
 				break;
 			case GemType.Purple:
-				grid[x, y] = Instantiate(gemPrefabs[3], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[3], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
 				break;
 			case GemType.Red:
-				grid[x, y] = Instantiate(gemPrefabs[4], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[4], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
 				break;
 			case GemType.Teal:
-				grid[x, y] = Instantiate(gemPrefabs[5], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[5], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
 				break;
 		}
 
-		grid[x, y].transform.localScale = Vector3.one * scale;
+		grid[x, y].transform.localScale = new Vector3(1 * imageScale, 1 * imageScale);
 	}
 
 	public void SelectObject(int posX, int posY)
@@ -89,13 +97,13 @@ public class GridManager : MonoBehaviour
 		if (selectedObject != null)
 		{
 			var swapObject = grid[posX, posY];
-			var selectedPos = selectedObject.transform.position;
+			var selectedPos = selectedObject.transform.localPosition;
 
 			grid[posX, posY] = selectedObject;
-			grid[posX, posY].transform.position = new Vector3(posX, posY, grid[posX, posY].transform.position.z);
+			grid[posX, posY].transform.localPosition = new Vector3(posX, posY, grid[posX, posY].transform.localPosition.z);
 
 			grid[(int)selectedPos.x, (int)selectedPos.y] = swapObject;
-			grid[(int)selectedPos.x, (int)selectedPos.y].transform.position = selectedPos;
+			grid[(int)selectedPos.x, (int)selectedPos.y].transform.localPosition = selectedPos;
 
 			selectedObject = null; //reset currently selected after
 
@@ -258,7 +266,7 @@ public class GridManager : MonoBehaviour
 			{
 				// set lower null space equal to current higher gem and update position accordingly
 				grid[coordinate.x, y - 1] = grid[coordinate.x, y];
-				grid[coordinate.x, y - 1].transform.position = new Vector3(coordinate.x, y - 1);
+				grid[coordinate.x, y - 1].transform.localPosition = new Vector3(coordinate.x, y - 1);
 
 				// set null as the current higher gem has been moved down
 				grid[coordinate.x, y] = null;

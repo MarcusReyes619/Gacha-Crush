@@ -2913,6 +2913,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848081744}
   m_CullTransparentMesh: 1
+--- !u!1 &859276476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 859276477}
+  m_Layer: 0
+  m_Name: TileHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &859276477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859276476}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.75, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &877630367
 GameObject:
   m_ObjectHideFlags: 0
@@ -5488,10 +5519,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f5a4b02fdd6024598ad23c9e9a5c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 0.8
+  scale: 0.7
   width: 8
   height: 8
   cameraTransform: {fileID: 624784132}
+  gemHolderTransform: {fileID: 859276477}
   gemPrefabs:
   - {fileID: 3180089894742263830, guid: 1084fee9ca3a69144a50b38b83f96cc4, type: 3}
   - {fileID: 3180089894742263830, guid: 3b745c34fee9ca84cbbf72c31c4ce0cb, type: 3}
@@ -7061,3 +7093,4 @@ SceneRoots:
   - {fileID: 1070226732}
   - {fileID: 1735919216}
   - {fileID: 1807686512}
+  - {fileID: 859276477}
