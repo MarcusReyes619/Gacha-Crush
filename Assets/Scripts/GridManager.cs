@@ -24,9 +24,10 @@ public class GridManager : MonoBehaviour
 
     void Start()
     {
-        GenerateGrid();
-		SetCameraTransform();
 		SetGemHolderTransform();
+		GenerateGrid();
+		SetCameraTransform();
+		
     }
 
 	private void Update()
@@ -52,44 +53,42 @@ public class GridManager : MonoBehaviour
 	private void GenerateGrid() // width x height
     {
 		grid = new GameObject[width, height];
-		int currentUIImage = 0;
 
         for (int x = 0; x < width; x++)
         {
 			for (int y = 0; y < height; y++)
 			{
-                GenerateGem(x, y, currentUIImage);
-				currentUIImage++;
+                GenerateGem(x, y);
 			}
 		}
     }
 
-	private void GenerateGem(int x, int y, int currentUIImage)
+	private void GenerateGem(int x, int y)
 	{
 		GemType gemType = (GemType)Random.Range(0, 6);
 
 		switch (gemType)
 		{
 			case GemType.Blue:
-				grid[x, y] = Instantiate(gemPrefabs[0], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
+				grid[x, y] = Instantiate(gemPrefabs[0], gemHolderTransform);
 				break;
 			case GemType.Green:
-				grid[x, y] = Instantiate(gemPrefabs[1], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
+				grid[x, y] = Instantiate(gemPrefabs[1], gemHolderTransform);
 				break;
 			case GemType.Orange:
-				grid[x, y] = Instantiate(gemPrefabs[2], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
+				grid[x, y] = Instantiate(gemPrefabs[2], gemHolderTransform);
 				break;
 			case GemType.Purple:
-				grid[x, y] = Instantiate(gemPrefabs[3], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
+				grid[x, y] = Instantiate(gemPrefabs[3], gemHolderTransform);
 				break;
 			case GemType.Red:
-				grid[x, y] = Instantiate(gemPrefabs[4], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
+				grid[x, y] = Instantiate(gemPrefabs[4], gemHolderTransform);
 				break;
 			case GemType.Teal:
-				grid[x, y] = Instantiate(gemPrefabs[5], new Vector3(x, y), Quaternion.identity, gemHolderTransform);
+				grid[x, y] = Instantiate(gemPrefabs[5], gemHolderTransform);
 				break;
 		}
-
+		grid[x, y].transform.localPosition = new Vector3(x, y);
 		grid[x, y].transform.localScale = new Vector3(1 * imageScale, 1 * imageScale);
 	}
 
@@ -112,8 +111,8 @@ public class GridManager : MonoBehaviour
 			firstMatchCoordinates.AddRange(CheckMatch((int)selectedPos.x, (int)selectedPos.y));
 
 			DropHigherGems(firstMatchCoordinates);
-			//list of both added together
-			//drop higher gems
+
+			SimpleFillEmptyGems();
 		}
 		else
 		{
@@ -281,6 +280,20 @@ public class GridManager : MonoBehaviour
 				grid[coordinate.x, y] = null;
 			}
 			else return;
+		}
+	}
+
+	private void SimpleFillEmptyGems()
+	{
+		for (int x = 0; x < width; x++)
+		{
+			for (int y = 0; y < height; y++)
+			{
+				if (grid[x,y] == null)
+				{
+					GenerateGem(x, y);
+				}
+			}
 		}
 	}
 }
