@@ -1,14 +1,17 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private float scale = 1;
-    [SerializeField] private int width, height;
+    [SerializeField] private float spacingScale = 1;
+	[SerializeField] private float imageScale = 1;
+	[SerializeField] private int width, height;
 	[SerializeField] private Transform cameraTransform;
-    [SerializeField] private GameObject[] gemPrefabs;
+	[SerializeField] private Transform gemHolderTransform;
+	[SerializeField] private GameObject[] gemPrefabs;
 	[SerializeField] private float addTime;
 	private GameObject selectedObject;
 
@@ -21,8 +24,10 @@ public class GridManager : MonoBehaviour
 
     void Start()
     {
-        GenerateGrid();
+		SetGemHolderTransform();
+		GenerateGrid();
 		SetCameraTransform();
+		
     }
 
 	private void Update()
@@ -37,51 +42,54 @@ public class GridManager : MonoBehaviour
 
 	private void SetCameraTransform() // center camera
 	{
-		cameraTransform.position = new Vector3(width / 2, height / 2, -10);
+		//cameraTransform.position = new Vector3(width / 2, height / 2, -10);
 	}
 
-    private void GenerateGrid() // width x height
+	private void SetGemHolderTransform() // scale objects
+	{
+		gemHolderTransform.localScale = new Vector3(1 * spacingScale, 1 * spacingScale);
+	}
+
+	private void GenerateGrid() // width x height
     {
 		grid = new GameObject[width, height];
-		int currentUIImage = 0;
 
         for (int x = 0; x < width; x++)
         {
 			for (int y = 0; y < height; y++)
 			{
-                GenerateGem(x, y, currentUIImage);
-				currentUIImage++;
+                GenerateGem(x, y);
 			}
 		}
     }
 
-	private void GenerateGem(int x, int y, int currentUIImage)
+	private void GenerateGem(int x, int y)
 	{
 		GemType gemType = (GemType)Random.Range(0, 6);
 
 		switch (gemType)
 		{
 			case GemType.Blue:
-				grid[x, y] = Instantiate(gemPrefabs[0], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[0], gemHolderTransform);
 				break;
 			case GemType.Green:
-				grid[x, y] = Instantiate(gemPrefabs[1], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[1], gemHolderTransform);
 				break;
 			case GemType.Orange:
-				grid[x, y] = Instantiate(gemPrefabs[2], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[2], gemHolderTransform);
 				break;
 			case GemType.Purple:
-				grid[x, y] = Instantiate(gemPrefabs[3], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[3], gemHolderTransform);
 				break;
 			case GemType.Red:
-				grid[x, y] = Instantiate(gemPrefabs[4], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[4], gemHolderTransform);
 				break;
 			case GemType.Teal:
-				grid[x, y] = Instantiate(gemPrefabs[5], new Vector3(x * scale, y * scale), Quaternion.identity);
+				grid[x, y] = Instantiate(gemPrefabs[5], gemHolderTransform);
 				break;
 		}
-
-		grid[x, y].transform.localScale = Vector3.one * scale;
+		grid[x, y].transform.localPosition = new Vector3(x, y);
+		grid[x, y].transform.localScale = new Vector3(1 * imageScale, 1 * imageScale);
 	}
 
 	public void SelectObject(int posX, int posY)
@@ -89,18 +97,22 @@ public class GridManager : MonoBehaviour
 		if (selectedObject != null)
 		{
 			var swapObject = grid[posX, posY];
-			var selectedPos = selectedObject.transform.position;
+			var selectedPos = selectedObject.transform.localPosition;
 
 			grid[posX, posY] = selectedObject;
-			grid[posX, posY].transform.position = new Vector3(posX, posY, grid[posX, posY].transform.position.z);
+			grid[posX, posY].transform.localPosition = new Vector3(posX, posY, grid[posX, posY].transform.localPosition.z);
 
 			grid[(int)selectedPos.x, (int)selectedPos.y] = swapObject;
-			grid[(int)selectedPos.x, (int)selectedPos.y].transform.position = selectedPos;
+			grid[(int)selectedPos.x, (int)selectedPos.y].transform.localPosition = selectedPos;
 
 			selectedObject = null; //reset currently selected after
 
-			CheckMatch(posX, posY);
-			CheckMatch((int)selectedPos.x, (int)selectedPos.y);
+			List<Vector2Int> firstMatchCoordinates = CheckMatch(posX, posY);
+			firstMatchCoordinates.AddRange(CheckMatch((int)selectedPos.x, (int)selectedPos.y));
+
+			DropHigherGems(firstMatchCoordinates);
+
+			SimpleFillEmptyGems();
 		}
 		else
 		{
@@ -109,12 +121,14 @@ public class GridManager : MonoBehaviour
 		}
 	}
 
-	private void CheckMatch(int x, int y)
+	private List<Vector2Int> CheckMatch(int x, int y)
 	{
 		int matchAmount = 1;
 		int incrementAmount = 1;
 		List<Vector2Int> coordinates = new List<Vector2Int>();
-		
+
+		List<Vector2Int> matchCoordinates = new List<Vector2Int>();
+
 		Gem getGemClass = grid[x, y].GetComponent<Gem>();
 		GemType checkGemType = getGemClass.gemType;
 
@@ -163,7 +177,7 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
-			MatchMade(coordinates);
+			matchCoordinates.AddRange(MatchMade(coordinates));
 		}
 
 		// Clear values for up/down check
@@ -215,18 +229,20 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
-			MatchMade(coordinates);
+			matchCoordinates.AddRange(MatchMade(coordinates));
 		}
+
+		return matchCoordinates;
 	}
 
-	private void MatchMade(List<Vector2Int> coordinates)
+	private List<Vector2Int> MatchMade(List<Vector2Int> coordinates)
 	{
 		print("match made!!!");
 		timer += addTime;
-		DeleteMatchedGems(coordinates);
+		return DeleteMatchedGems(coordinates);
 	}
 
-	private void DeleteMatchedGems(List<Vector2Int> coordinates)
+	private List<Vector2Int> DeleteMatchedGems(List<Vector2Int> coordinates)
 	{
 		foreach (Vector2Int coordinate in coordinates)
 		{
@@ -234,7 +250,7 @@ public class GridManager : MonoBehaviour
 			grid[coordinate.x, coordinate.y] = null;
 		}
 
-		DropHigherGems(coordinates);
+		return coordinates;
 	}
 
 	private void DropHigherGems(List<Vector2Int> coordinates)
@@ -258,12 +274,26 @@ public class GridManager : MonoBehaviour
 			{
 				// set lower null space equal to current higher gem and update position accordingly
 				grid[coordinate.x, y - 1] = grid[coordinate.x, y];
-				grid[coordinate.x, y - 1].transform.position = new Vector3(coordinate.x, y - 1);
+				grid[coordinate.x, y - 1].transform.localPosition = new Vector3(coordinate.x, y - 1);
 
 				// set null as the current higher gem has been moved down
 				grid[coordinate.x, y] = null;
 			}
 			else return;
+		}
+	}
+
+	private void SimpleFillEmptyGems()
+	{
+		for (int x = 0; x < width; x++)
+		{
+			for (int y = 0; y < height; y++)
+			{
+				if (grid[x,y] == null)
+				{
+					GenerateGem(x, y);
+				}
+			}
 		}
 	}
 }

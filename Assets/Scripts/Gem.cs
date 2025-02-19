@@ -19,7 +19,7 @@ public class Gem : MonoBehaviour
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
-			gridManager.SelectObject((int)transform.position.x, (int)transform.position.y);
+			gridManager.SelectObject((int)transform.localPosition.x, (int)transform.localPosition.y);
 		}
 	}
 }

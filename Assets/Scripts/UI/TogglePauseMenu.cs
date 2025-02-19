@@ -28,20 +28,20 @@ public class TogglePauseMenu : MonoBehaviour
         GameManager.instance.PauseGame(true);
     }
 
-    public void Close_PauseMenu()
-    {
-        Resume_SFX.Play();
-
-        PauseMenu_UI.SetActive(false);
-        GameManager.instance.PauseGame(false);
-    }
-
     public void Open_OtherMenu()
     {
         OpenMenu_SFX.Play();
 
         OtherMenu_UI.SetActive(true);
         GameManager.instance.PauseGame(true);
+    }
+
+    public void Close_PauseMenu()
+    {
+        Resume_SFX.Play();
+
+        PauseMenu_UI.SetActive(false);
+        GameManager.instance.PauseGame(false);
     }
 
     public void Load_CollectionScene()
