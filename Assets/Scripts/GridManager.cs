@@ -127,11 +127,23 @@ public class GridManager : MonoBehaviour
 		int matchAmount = 1;
 		int incrementAmount = 1;
 		List<Vector2Int> coordinates = new List<Vector2Int>();
-
 		List<Vector2Int> matchCoordinates = new List<Vector2Int>();
 
-		Gem getGemClass = grid[x, y].GetComponent<Gem>();
-		GemType checkGemType = getGemClass.gemType;
+		Gem getGemClass;
+		GemType checkGemType;
+
+		if (grid[x, y] == null)
+		{
+			return matchCoordinates;
+		}
+		else
+		{
+			getGemClass = grid[x, y].GetComponent<Gem>();
+			checkGemType = getGemClass.gemType;
+		}
+
+		
+		
 
 		coordinates.Add(new Vector2Int(x, y));
 
