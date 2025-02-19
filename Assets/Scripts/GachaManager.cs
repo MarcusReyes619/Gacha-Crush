@@ -10,8 +10,6 @@ public class GachaManager : MonoBehaviour
     public Image border;
     public Image gachaImage;
     public TMP_Text rarityText;
-    public List<Sprite> AllImages = new List<Sprite>();
-    public List<Sprite> AllBorders = new List<Sprite>();
     public PlayerData playerData;
     public Button pullButton;
     public AudioSource audioSource;
@@ -21,6 +19,12 @@ public class GachaManager : MonoBehaviour
     private bool pulling = false;
     private float pt = 0;
     private float pc = 0;
+
+    public List<GachaItem> commonItems;
+    public List<GachaItem> uncommonItems;
+    public List<GachaItem> rareItems;
+    public List<GachaItem> ultimateItems;
+    public List<GachaItem> legendaryItems;
 
     private void Update()
     {
@@ -39,7 +43,12 @@ public class GachaManager : MonoBehaviour
                     GachaItem item = Pull();
                    
                     playerData.OwnedItems.Add(item);
-                    if (item.Rarity == Rarity.Legendary) audioSource.PlayOneShot(LegendarySound);
+                    if (item.Rarity == Rarity.Legendary)
+                    {
+                        audioSource.pitch = 1.0f;
+                        audioSource.PlayOneShot(LegendarySound);
+
+                    } 
                     pullButton.interactable = true;
                 }
                 else
@@ -61,39 +70,39 @@ public class GachaManager : MonoBehaviour
 
     public GachaItem Pull()
     {
-        GachaItem newItem = ScriptableObject.CreateInstance<GachaItem>();
-        newItem.GachaImg = AllImages[Random.Range(0, AllImages.Count)];
+        float rand = Random.Range(0f, 100f); // Generate a random number between 0-100
 
-        float rand = Random.Range(0, 100);
-        if (rand <= 3)
+        List<GachaItem> selectedList = null;
+
+        if (rand <= 3 && legendaryItems.Count > 0) // 3% chance for Legendary
         {
-            newItem.Rarity = Rarity.Legendary;
-            newItem.Border = AllBorders[4];
+            selectedList = legendaryItems;
         }
-        else if (rand <= 10)
+        else if (rand <= 10 && ultimateItems.Count > 0) // 7% chance for Ultimate (10 - 3)
         {
-            newItem.Rarity = Rarity.Ultimate;
-            newItem.Border = AllBorders[3];
+            selectedList = ultimateItems;
         }
-        else if (rand <= 30)
+        else if (rand <= 30 && rareItems.Count > 0) // 20% chance for Rare (30 - 10)
         {
-            newItem.Rarity = Rarity.Rare;
-            newItem.Border = AllBorders[2];
+            selectedList = rareItems;
         }
-        else if (rand <= 65)
+        else if (rand <= 65 && uncommonItems.Count > 0) // 35% chance for Uncommon (65 - 30)
         {
-            newItem.Rarity = Rarity.Uncommon;
-            newItem.Border = AllBorders[1];
+            selectedList = uncommonItems;
         }
-        else
+        else if (commonItems.Count > 0) // Remaining 35% chance for Common
         {
-            newItem.Rarity = Rarity.Common;
-            newItem.Border = AllBorders[0];
+            selectedList = commonItems;
         }
 
+        // Pick a random item from the selected rarity list
+        GachaItem newItem = selectedList[Random.Range(0, selectedList.Count)];
+
+        // Update UI
         border.sprite = newItem.Border;
         gachaImage.sprite = newItem.GachaImg;
         rarityText.text = newItem.Rarity.ToString();
+
         return newItem;
     }
 
