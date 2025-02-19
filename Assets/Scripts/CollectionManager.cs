@@ -22,7 +22,7 @@ public class CollectionManager : MonoBehaviour
             GameObject go = Instantiate(ItemBase);
             go.transform.SetParent(gridLayout.transform);
             go.GetComponentsInChildren<Image>()[0].sprite = item.Border;
-            go.GetComponentsInChildren<Image>()[1].sprite = item.GachaImg;
+            go.GetComponentsInChildren<Image>()[2].sprite = item.GachaImg;
         }
     }
     public void OpenGacha()
