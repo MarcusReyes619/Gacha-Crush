@@ -32,7 +32,9 @@ public class GridManager : MonoBehaviour
 	private void Update()
 	{
 		if (!GameManager.instance.IsGamePaused)
+		{
 			UpdateTimer();
+		}
 	}
 
 	private void UpdateTimer()
