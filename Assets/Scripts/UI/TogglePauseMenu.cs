@@ -6,15 +6,18 @@ public class TogglePauseMenu : MonoBehaviour
     public static TogglePauseMenu instance;
 
     [SerializeField] GameObject PauseMenu_UI;
+    [SerializeField] GameObject OtherMenu_UI;
 
     [Header("Audio")]
     [SerializeField] private AudioSource Pause_SFX;
     [SerializeField] private AudioSource Resume_SFX;
+    [SerializeField] private AudioSource OpenMenu_SFX;
     [SerializeField] private AudioSource Exit_SFX;
 
     private void Start()
     {
         PauseMenu_UI.SetActive(false);
+        OtherMenu_UI.SetActive(false);
     }
 
     public void Open_PauseMenu()
@@ -22,6 +25,14 @@ public class TogglePauseMenu : MonoBehaviour
         PauseMenu_UI.SetActive(true);
         Pause_SFX.Play();
 
+        GameManager.instance.PauseGame(true);
+    }
+
+    public void Open_OtherMenu()
+    {
+        OpenMenu_SFX.Play();
+
+        OtherMenu_UI.SetActive(true);
         GameManager.instance.PauseGame(true);
     }
 

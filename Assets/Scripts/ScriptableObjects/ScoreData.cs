@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
-[CreateAssetMenu(fileName = "Scroe", menuName = "Scriptable Objects/Scroe")]
-public class ScroeData : ScriptableObject
+[CreateAssetMenu(fileName = "Score", menuName = "Scriptable Objects/Score")]
+public class ScoreData : ScriptableObject
 {
-    public UnityAction<int> score;
+    [SerializeField] public UnityAction<int> score;
 
     public void Add(int value)
     {
