@@ -33,8 +33,12 @@ public class GridManager : MonoBehaviour
 
 	private void Update()
 	{
-		UpdateTimer();
+		if (!GameManager.instance.IsGamePaused)
+		{
+			UpdateTimer();
+		}
 	}
+
 	private void UpdateTimer()
 	{
 		timer -= Time.deltaTime;
