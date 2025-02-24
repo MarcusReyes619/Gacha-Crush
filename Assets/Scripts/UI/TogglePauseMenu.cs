@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,8 @@ public class TogglePauseMenu : MonoBehaviour
 
     [SerializeField] GameObject PauseMenu_UI;
     [SerializeField] GameObject OtherMenu_UI;
+    [SerializeField] GameObject fadeScreen;
+    public float fadeDuration = 0.75f;
 
     [Header("Audio")]
     [SerializeField] private AudioSource Pause_SFX;
@@ -18,6 +21,7 @@ public class TogglePauseMenu : MonoBehaviour
     {
         PauseMenu_UI.SetActive(false);
         OtherMenu_UI.SetActive(false);
+        fadeScreen.SetActive(false);
     }
 
     public void Open_PauseMenu()
@@ -46,14 +50,20 @@ public class TogglePauseMenu : MonoBehaviour
 
     public void Load_CollectionScene()
     {
-        SceneManager.LoadScene("Collection_Scene");
+        StartCoroutine(FadeToBlackAndLoadScene("Collection_Scene"));
     }
 
     public void Load_MainMenu()
     {
         Exit_SFX.Play();
+        StartCoroutine(FadeToBlackAndLoadScene("TitleScreen_Scene"));
+    }
 
-        // Load Lobby Scene
-        GameManager.instance.Load_TitleScene();
+    private IEnumerator FadeToBlackAndLoadScene(string sceneName)
+    {
+        //fadeScreen.SetActive(true);
+        yield return new WaitForSeconds(fadeDuration);
+        SceneManager.LoadScene(sceneName);
+        //fadeScreen.SetActive(false);
     }
 }

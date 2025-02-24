@@ -5,24 +5,42 @@ public class SwitchScene_Manager : MonoBehaviour
 {
     public static SwitchScene_Manager instance;
 
-    [Header("Scenes")]
-    [SerializeField] private string[] Scenes; // StartMenu, Lobby, Main Gameplay, Gacha, Gacha Gallery
+    public enum Scenes
+    {
+        TitleScreen_Scene,
+        MainGameplay_Scene,
+        Gacha_Scene,
+        Collection_Scene
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void Load_GameplayScene()
     {
-        SceneManager.LoadScene("MainGameplay_Scene");
+        AudioManager.instance.ChangeSceneWithMusic(Scenes.MainGameplay_Scene, "Main_Music");
     }
 
     public void Load_GachaScene()
     {
-        SceneManager.LoadScene("Gacha_Scene");
+        AudioManager.instance.ChangeSceneWithMusic(Scenes.Gacha_Scene, "Gacha_Music");
     }
 
     public void Load_TitleScene()
     {
-        SceneManager.LoadScene("TitleScreen_Scene");
+        AudioManager.instance.ChangeSceneWithMusic(Scenes.TitleScreen_Scene, "Main_Music");
     }
-    
+
     public void Load_CollectionScene()
     {
         SceneManager.LoadScene("Collection_Scene");
