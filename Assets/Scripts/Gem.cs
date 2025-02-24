@@ -15,11 +15,15 @@ public class Gem : MonoBehaviour
 		gridManager = gridObject.GetComponent<GridManager>();
 	}
 
-	private void OnMouseOver()
+	public void SelectObject(int posX, int posY)
 	{
-		if (Input.GetMouseButtonDown(0))
+		if (gridManager.selectedObject == null)
 		{
 			gridManager.SelectObject((int)transform.localPosition.x, (int)transform.localPosition.y);
+		}
+		else
+		{
+			gridManager.ChooseSwapGems(posX, posY);
 		}
 	}
 }

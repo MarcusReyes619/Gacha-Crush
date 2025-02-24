@@ -13,7 +13,8 @@ public class GridManager : MonoBehaviour
 	[SerializeField] private Transform gemHolderTransform;
 	[SerializeField] private GameObject[] gemPrefabs;
 	[SerializeField] private float addTime;
-	private GameObject selectedObject;
+	[SerializeField] private float mininumSwapDistance;
+	public GameObject selectedObject;
 
 	public float timer;
 
@@ -26,7 +27,7 @@ public class GridManager : MonoBehaviour
     {
 		SetGemHolderTransform();
 		GenerateGrid();
-		SetCameraTransform();
+		//SetCameraTransform();
 		
     }
 
@@ -40,10 +41,10 @@ public class GridManager : MonoBehaviour
 		TimerSlider_UI.value = timer;
 	}
 
-	private void SetCameraTransform() // center camera
-	{
-		//cameraTransform.position = new Vector3(width / 2, height / 2, -10);
-	}
+	//private void SetCameraTransform() // center camera
+	//{
+	//	//cameraTransform.position = new Vector3(width / 2, height / 2, -10);
+	//}
 
 	private void SetGemHolderTransform() // scale objects
 	{
@@ -92,33 +93,45 @@ public class GridManager : MonoBehaviour
 		grid[x, y].transform.localScale = new Vector3(1 * imageScale, 1 * imageScale);
 	}
 
+
 	public void SelectObject(int posX, int posY)
 	{
-		if (selectedObject != null)
-		{
-			var swapObject = grid[posX, posY];
-			var selectedPos = selectedObject.transform.localPosition;
+		selectedObject = grid[posX, posY];
+	}
 
-			grid[posX, posY] = selectedObject;
-			grid[posX, posY].transform.localPosition = new Vector3(posX, posY, grid[posX, posY].transform.localPosition.z);
+	public void DeselectObject()
+	{
+		selectedObject = null;
+	}
 
-			grid[(int)selectedPos.x, (int)selectedPos.y] = swapObject;
-			grid[(int)selectedPos.x, (int)selectedPos.y].transform.localPosition = selectedPos;
+	public void ChooseSwapGems(int posX, int posY)
+	{
+		var selectedPos = selectedObject.transform.localPosition;
+		SwapObjects((int)selectedPos.x + posX, (int)selectedPos.y + posY);
+	}
 
-			selectedObject = null; //reset currently selected after
+	public void SwapObjects(int posX, int posY)
+	{
+		if (selectedObject == null) return;
 
-			List<Vector2Int> firstMatchCoordinates = CheckMatch(posX, posY);
-			firstMatchCoordinates.AddRange(CheckMatch((int)selectedPos.x, (int)selectedPos.y));
+		var swapObject = grid[posX, posY];
+		var selectedPos = selectedObject.transform.localPosition;
 
-			DropHigherGems(firstMatchCoordinates);
+		grid[posX, posY] = selectedObject;
+		grid[posX, posY].transform.localPosition = new Vector3(posX, posY, grid[posX, posY].transform.localPosition.z);
 
-			SimpleFillEmptyGems();
-		}
-		else
-		{
-			selectedObject = grid[posX, posY];
-			print("selected object: " + selectedObject.name);
-		}
+		grid[(int)selectedPos.x, (int)selectedPos.y] = swapObject;
+		grid[(int)selectedPos.x, (int)selectedPos.y].transform.localPosition = selectedPos;
+
+		selectedObject = null; //reset currently selected after
+
+		List<Vector2Int> firstMatchCoordinates = CheckMatch(posX, posY);
+		firstMatchCoordinates.AddRange(CheckMatch((int)selectedPos.x, (int)selectedPos.y));
+
+		DropHigherGems(firstMatchCoordinates);
+
+		SimpleFillEmptyGems();
+
 	}
 
 	private List<Vector2Int> CheckMatch(int x, int y)
