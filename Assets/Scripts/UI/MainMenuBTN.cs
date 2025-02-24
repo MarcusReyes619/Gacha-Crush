@@ -19,7 +19,7 @@ public class MainMenuBTN : MonoBehaviour
 
     public void Gacha_Click()
     {
-        StartCoroutine(FadeToBlackAndLoadScene("Gacha_Scene"));
+        SwitchScene_Manager.instance.Load_GachaScene();
     }
 
     private IEnumerator FadeToBlackAndLoadScene(string sceneName)

@@ -50,13 +50,16 @@ public class TogglePauseMenu : MonoBehaviour
 
     public void Load_CollectionScene()
     {
-        StartCoroutine(FadeToBlackAndLoadScene("Collection_Scene"));
+        SwitchScene_Manager.instance.Load_CollectionScene();
     }
 
     public void Load_MainMenu()
     {
         Exit_SFX.Play();
-        StartCoroutine(FadeToBlackAndLoadScene("TitleScreen_Scene"));
+        //SceneManager.LoadScene("TitleScreen_Scene");
+
+        SwitchScene_Manager.instance.Load_TitleScene();
+        //StartCoroutine(FadeToBlackAndLoadScene("TitleScreen_Scene"));
     }
 
     private IEnumerator FadeToBlackAndLoadScene(string sceneName)

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,6 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] Music_Audios, SFX_Audios;
     public AudioSource Music_Source, SFX_Source;
-    public CanvasGroup fadeCanvas;
 
     public float fadeDuration = 0.75f; // Adjust as needed
 
@@ -68,42 +68,23 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeSceneWithMusic(SwitchScene_Manager.Scenes targetScene, string newMusic)
     {
-        if (!isFading)
+        //if (!isFading)
         {
             nextMusicName = newMusic;
-            StartCoroutine(FadeToBlackAndLoadScene(targetScene));
+            //StartCoroutine(FadeToBlackAndLoadScene(targetScene));
+            SceneManager.LoadScene(targetScene.ToString());
+
         }
     }
 
     private IEnumerator FadeToBlackAndLoadScene(SwitchScene_Manager.Scenes scene)
     {
         isFading = true;
-        float endAlpha = 0.0f;
-
-        while (fadeCanvas.alpha < endAlpha)
-        {
-            fadeCanvas.alpha += Time.deltaTime / fadeDuration;
-            yield return null;
-        }
 
         StartCoroutine(FadeOutMusic());
         yield return new WaitForSeconds(fadeDuration);
 
         SceneManager.LoadScene(scene.ToString());
-        StartCoroutine(FadeFromBlack());
-    }
-
-    private IEnumerator FadeFromBlack()
-    {
-        float endAlpha = 0f;
-
-        while (fadeCanvas.alpha > endAlpha)
-        {
-            fadeCanvas.alpha -= Time.deltaTime / fadeDuration;
-            yield return null;
-        }
-
-        isFading = false;
     }
 
     private IEnumerator FadeOutMusic()

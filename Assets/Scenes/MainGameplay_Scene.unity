@@ -1493,7 +1493,6 @@ GameObject:
   - component: {fileID: 1421479338}
   - component: {fileID: 1421479337}
   - component: {fileID: 1421479336}
-  - component: {fileID: 1421479340}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1584,18 +1583,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!225 &1421479340
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421479335}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!224 &1563826259 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5289321307044214234, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
@@ -2064,7 +2051,7 @@ PrefabInstance:
     - target: {fileID: 4029542028741820657, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: fadeCanvas
       value: 
-      objectReference: {fileID: 1421479340}
+      objectReference: {fileID: 0}
     - target: {fileID: 4029542028741820657, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: fadeScreen
       value: 
