@@ -25,7 +25,6 @@ public class GachaManager : MonoBehaviour
     public List<GachaItem> rareItems;
     public List<GachaItem> ultimateItems;
     public List<GachaItem> legendaryItems;
-
     private void Update()
     {
         if (pulling)
