@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8264159073046004579}
   - component: {fileID: 4207492010359050629}
+  - component: {fileID: 5685205875026754616}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,7 +46,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsGamePaused: 0
-  Scenes:
-  - TitleScreen_Scene
-  - Lobby_Scene
-  - MainGameplay_Scene
+--- !u!114 &5685205875026754616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2478254726622029244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f84c7d85f7202a4982de64a2181bf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currency: {fileID: 11400000, guid: e3199c9f5a9c65143b3941b8ac15258a, type: 2}

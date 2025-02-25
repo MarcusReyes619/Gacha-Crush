@@ -559,14 +559,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4207492010359050629, guid: f58d759fd707d974cae13e497f3161b2, type: 3}
-      propertyPath: Scenes.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4207492010359050629, guid: f58d759fd707d974cae13e497f3161b2, type: 3}
-      propertyPath: 'Scenes.Array.data[3]'
-      value: Gacha_Scene
-      objectReference: {fileID: 0}
     - target: {fileID: 8264159073046004579, guid: f58d759fd707d974cae13e497f3161b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
