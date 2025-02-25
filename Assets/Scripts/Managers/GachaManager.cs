@@ -27,6 +27,8 @@ public class GachaManager : MonoBehaviour
     public List<GachaItem> ultimateItems;
     public List<GachaItem> legendaryItems;
 
+    [SerializeField] ParticleSpawner particleSpawner;
+
     private void Update()
     {
         if (pulling)
@@ -43,6 +45,7 @@ public class GachaManager : MonoBehaviour
                     GachaItem item = Pull();
                     screenShaker.shakeAmount = 0;
                     playerData.OwnedItems.Add(item);
+                    particleSpawner.SpawnPartcle();
                     if (item.Rarity == Rarity.Legendary)
                     {
                         audioSource.pitch = 1.0f;
