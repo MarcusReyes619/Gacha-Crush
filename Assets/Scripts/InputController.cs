@@ -18,7 +18,7 @@ public class InputController : MonoBehaviour
 
 	private void Update()
 	{
-		if (Input.touchCount > 0)
+		if (Input.touchCount > 0 && !GameManager.instance.IsGamePaused)
 		{
 			GetGemFromTouchPosition();
 		}
