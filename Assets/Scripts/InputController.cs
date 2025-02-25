@@ -44,7 +44,7 @@ public class InputController : MonoBehaviour
 			Vector3 touchPosition = new Vector3(touch.position.x, touch.position.y);
 
 			RaycastHit2D rayHit = Physics2D.GetRayIntersection(currentCamera.ScreenPointToRay(touchPosition));
-			Debug.Log(rayHit.transform.name);
+			//Debug.Log(rayHit.transform.name);
 
 			selectedGem = rayHit.transform.GetComponent<Gem>();
 			selectedGem.SelectObject(0, 0);

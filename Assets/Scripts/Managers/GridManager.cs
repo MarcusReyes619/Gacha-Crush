@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -23,11 +24,15 @@ public class GridManager : MonoBehaviour
 
 	public float timer;
 
-	[Header("UI")]
+    [Header("UI")]
 	[SerializeField] private Slider TimerSlider_UI;
 	[SerializeField] private TMP_Text scoreText;
 	[SerializeField] private ScoreData scoreData;
 	[SerializeField] private CurrencyData currency;
+
+	[Header("SFX")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip matchSFX;
 
 	private int scoreMult;
     GameObject[,] grid;
@@ -172,9 +177,6 @@ public class GridManager : MonoBehaviour
 			checkGemType = getGemClass.gemType;
 		}
 
-		
-		
-
 		coordinates.Add(new Vector2Int(x, y));
 
 		while (true) // check left
@@ -280,13 +282,20 @@ public class GridManager : MonoBehaviour
 		return matchCoordinates;
 	}
 
-	private List<Vector2Int> MatchMade(List<Vector2Int> coordinates)
-	{
-		print("match made!!!");
-		scoreData.Add(scoreMult > 0 ? 100 * scoreMult : 100);
-		timer += addTime;
-		return DeleteMatchedGems(coordinates);
-	}
+    private List<Vector2Int> MatchMade(List<Vector2Int> coordinates)
+    {
+        print("match made!!!");
+        scoreData.Add(scoreMult > 0 ? 100 * scoreMult : 100);
+        timer += addTime;
+
+        // Play sound effect when a match is made
+        if (matchSFX != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(matchSFX);
+        }
+
+        return DeleteMatchedGems(coordinates);
+    }
 
     private void UpdateScoreUI(int newScore)
     {

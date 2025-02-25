@@ -13,7 +13,6 @@ public class AudioManager : MonoBehaviour
     public float fadeDuration = 0.75f; // Adjust as needed
 
     private string nextMusicName = "";
-    private bool isFading = false;
 
     private void Awake()
     {
@@ -79,8 +78,6 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator FadeToBlackAndLoadScene(SwitchScene_Manager.Scenes scene)
     {
-        isFading = true;
-
         StartCoroutine(FadeOutMusic());
         yield return new WaitForSeconds(fadeDuration);
 
