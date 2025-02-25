@@ -14,7 +14,8 @@ public class MainMenuBTN : MonoBehaviour
 
     public void Gem_Click()
     {
-        StartCoroutine(FadeToBlackAndLoadScene("MainGameplay_Scene"));
+        //StartCoroutine(FadeToBlackAndLoadScene("MainGameplay_Scene"));
+        SwitchScene_Manager.instance.Load_GameplayScene();
     }
 
     public void Gacha_Click()

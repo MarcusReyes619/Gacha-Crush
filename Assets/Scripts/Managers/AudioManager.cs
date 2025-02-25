@@ -106,7 +106,14 @@ public class AudioManager : MonoBehaviour
         {
             StartCoroutine(FadeInMusic(nextMusicName));
         }
+
+        // Reset UI elements if needed
+        if (SceneManager.GetActiveScene().name == "TitleScreen_Scene")
+        {
+            TogglePauseMenu.instance?.Close_PauseMenu(); // Ensure UI is properly reset
+        }
     }
+
 
     private IEnumerator FadeInMusic(string musicName)
     {

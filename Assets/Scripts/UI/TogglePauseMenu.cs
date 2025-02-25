@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class TogglePauseMenu : MonoBehaviour
@@ -22,6 +23,9 @@ public class TogglePauseMenu : MonoBehaviour
         PauseMenu_UI.SetActive(false);
         OtherMenu_UI.SetActive(false);
         fadeScreen.SetActive(false);
+
+        // Force UI elements to be interactable after returning to the main menu
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void Open_PauseMenu()
@@ -56,11 +60,18 @@ public class TogglePauseMenu : MonoBehaviour
     public void Load_MainMenu()
     {
         Exit_SFX.Play();
-        //SceneManager.LoadScene("TitleScreen_Scene");
-
-        SwitchScene_Manager.instance.Load_TitleScene();
-        //StartCoroutine(FadeToBlackAndLoadScene("TitleScreen_Scene"));
+        StartCoroutine(LoadSceneAsync("TitleScreen_Scene"));
     }
+
+    private IEnumerator LoadSceneAsync(string sceneName)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
 
     private IEnumerator FadeToBlackAndLoadScene(string sceneName)
     {
