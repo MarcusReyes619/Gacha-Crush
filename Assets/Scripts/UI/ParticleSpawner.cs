@@ -8,7 +8,7 @@ public class ParticleSpawner : MonoBehaviour
 
     public void SpawnPartcle()
     {
-        Instantiate(particle[0]);
+        Instantiate(particle[0],this.transform);
     }
     public void SpawnPartcle(GachaItem item) 
     {
