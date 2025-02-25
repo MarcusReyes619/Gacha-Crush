@@ -71,6 +71,7 @@ public class AudioManager : MonoBehaviour
         {
             nextMusicName = newMusic;
             //StartCoroutine(FadeToBlackAndLoadScene(targetScene));
+            GameManager.instance.PauseGame(false);
             SceneManager.LoadScene(targetScene.ToString());
 
         }

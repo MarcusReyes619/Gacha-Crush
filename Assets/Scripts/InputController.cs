@@ -6,7 +6,6 @@ public class InputController : MonoBehaviour
 
 	private Vector2 startPosition;
 	private Vector2 endPosition;
-	private bool renderDebugLine;
 	private GridManager gridManager;
 
 	private Gem selectedGem;
@@ -19,20 +18,10 @@ public class InputController : MonoBehaviour
 
 	private void Update()
 	{
-		//if (Input.GetMouseButtonDown(0))
-  //      {
-		//	GetGemFromMousePosition();
-		//}
-
 		if (Input.touchCount > 0)
 		{
 			GetGemFromTouchPosition();
 		}
-
-		//if (Input.GetMouseButtonUp(0))
-  //      {
-		//	CalculateSwapGem();
-		//}
     }
 
 	private void GetGemFromMousePosition()
@@ -44,7 +33,6 @@ public class InputController : MonoBehaviour
 		selectedGem.SelectObject(0,0);
 
 		startPosition = GetMousePosition();
-		renderDebugLine = true;
 	}
 
 	private void GetGemFromTouchPosition()
@@ -53,23 +41,22 @@ public class InputController : MonoBehaviour
 
 		if (touch.phase == TouchPhase.Began)
 		{
-			RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(new Vector3(touch.position.x, touch.position.y)));
+			Vector3 touchPosition = new Vector3(touch.position.x, touch.position.y);
+
+			RaycastHit2D rayHit = Physics2D.GetRayIntersection(currentCamera.ScreenPointToRay(touchPosition));
 			Debug.Log(rayHit.transform.name);
 
 			selectedGem = rayHit.transform.GetComponent<Gem>();
 			selectedGem.SelectObject(0, 0);
 
 			startPosition = GetMousePosition();
-			renderDebugLine = true;
 		}
 		else if (touch.phase == TouchPhase.Ended)
 		{
-			endPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+			endPosition = currentCamera.ScreenToWorldPoint(Input.GetTouch(0).position);
 			
 			CalculateSwapGem();
 		}
-
-		
 	}
 
 	private void CalculateSwapGem()
@@ -84,6 +71,13 @@ public class InputController : MonoBehaviour
 		if (compareY < 0) absoluteY = -compareY;
 		else absoluteY = compareY;
 
+		float checkForMinDistance = Mathf.Max(absoluteX, absoluteY);
+		if (checkForMinDistance < gridManager.mininumSwapDistance) // if touch movement is too small, don't swap and reset
+		{
+			gridManager.DeselectObject();
+			return;
+		}
+
 		if (absoluteX > absoluteY)
 		{
 			if (compareX > 0) selectedGem.SelectObject(1,0);
@@ -96,7 +90,6 @@ public class InputController : MonoBehaviour
 		}
 
 		gridManager.DeselectObject();
-		renderDebugLine = false;
 	}
 
     private Vector3 GetMousePosition()

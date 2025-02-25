@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
@@ -11,9 +12,13 @@ public class GridManager : MonoBehaviour
 	[SerializeField] private int width, height;
 	[SerializeField] private Transform cameraTransform;
 	[SerializeField] private Transform gemHolderTransform;
-	[SerializeField] private GameObject[] gemPrefabs;
 	[SerializeField] private float addTime;
-	[SerializeField] private float mininumSwapDistance;
+	[SerializeField] public float mininumSwapDistance;
+	[SerializeField] private GameObject[] gemPrefabs;
+	[SerializeField] private GameObject TopPanel;
+	[SerializeField] private GameObject GamePanel;
+	[SerializeField] private GameObject GameOverPanel;
+	[SerializeField] private TMP_Text GameOverText;
 	public GameObject selectedObject;
 
 	public float timer;
@@ -31,7 +36,7 @@ public class GridManager : MonoBehaviour
 		SetGemHolderTransform();
 		GenerateGrid();
 		scoreData.Subscribe(UpdateScoreUI);
-    }
+	}
 
 	private void Update()
 	{
@@ -45,6 +50,16 @@ public class GridManager : MonoBehaviour
 	{
 		timer -= Time.deltaTime;
 		TimerSlider_UI.value = timer;
+
+		if (timer <= 0)
+		{
+			GameManager.instance.IsGamePaused = true;
+			//setvisible ui
+			TopPanel.SetActive(false);
+			GamePanel.SetActive(false);
+			GameOverPanel.SetActive(true);
+			GameOverText.text = "GAME OVER\nScore: " + scoreText.text;
+		}
 	}
 
 	private void SetGemHolderTransform() // scale objects
