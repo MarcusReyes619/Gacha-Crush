@@ -940,9 +940,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 30
+  m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 30
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1649,7 +1649,7 @@ MonoBehaviour:
   GameOverPanel: {fileID: 1864818361}
   GameOverText: {fileID: 1864818360}
   selectedObject: {fileID: 0}
-  timer: 15
+  timer: 10
   TimerSlider_UI: {fileID: 877630369}
   scoreText: {fileID: 369226168}
   scoreData: {fileID: 11400000, guid: 07b6686d49c6c544e951728ec137a0c9, type: 2}
@@ -1765,19 +1765,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 966726953604807880, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 966726953604807880, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 966726953604807880, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 375
       objectReference: {fileID: 0}
     - target: {fileID: 966726953604807880, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -137.5
       objectReference: {fileID: 0}
     - target: {fileID: 2492076850944443543, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_text
@@ -1795,47 +1795,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3140956841931928130, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3140956841931928130, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3140956841931928130, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 375
       objectReference: {fileID: 0}
     - target: {fileID: 3140956841931928130, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -287.5
       objectReference: {fileID: 0}
     - target: {fileID: 3330891213164242283, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3330891213164242283, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3330891213164242283, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 447.6684
       objectReference: {fileID: 0}
     - target: {fileID: 3330891213164242283, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1060
       objectReference: {fileID: 0}
     - target: {fileID: 3432894560733826752, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3432894560733826752, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3432894560733826752, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 3444400576125289859, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_IsActive
@@ -1983,7 +1983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7014343871283372670, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8068451102820277953, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_Color.a
