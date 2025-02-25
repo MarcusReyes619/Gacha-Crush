@@ -55,7 +55,7 @@ public class GachaManager : MonoBehaviour
 
                     } 
                     pullButton.interactable = true;
-                    currency.Subtract(10);
+                    CurrencyManager.instance.SpendCurrency(10);
                 }
                 else
                 {
@@ -75,15 +75,17 @@ public class GachaManager : MonoBehaviour
 
     public void PullButton()
     {
-        pulling = true;
-        pullButton.interactable = false;
-        pt = 0.1f;
-        pc = 10;
+        //if (CurrencyManager.instance.GetCurrency() <= 10)
+        {
+            pulling = true;
+            pullButton.interactable = false;
+            pt = 0.1f;
+            pc = 10;
+        }
     }
 
     public GachaItem Pull()
     {
-
             float rand = Random.Range(0f, 100f); // Generate a random number between 0-100
 
             List<GachaItem> selectedList = null;
@@ -118,8 +120,6 @@ public class GachaManager : MonoBehaviour
             rarityText.text = newItem.Rarity.ToString();
 
             return newItem;
-        
-        
     }
 
     public void OpenCollection()

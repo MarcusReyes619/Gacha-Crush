@@ -62,10 +62,10 @@ public class GridManager : MonoBehaviour
 			GameManager.instance.IsGamePaused = true;
 			//setvisible ui
 			TopPanel.SetActive(false);
-			GamePanel.SetActive(false);
+			GamePanel.SetActive(true);
 			GameOverPanel.SetActive(true);
 			GameOverText.text = "GAME OVER\nScore: " + scoreText.text;
-			currency.Add(scoreData.GetScore());
+            CurrencyManager.instance.AddCurrency(scoreData.GetScore());
 		}
 	}
 

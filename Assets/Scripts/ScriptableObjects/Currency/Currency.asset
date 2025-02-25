@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyName: 
   currencyIcon: {fileID: 0}
-  startingAmount: 0
-  currentAmount: 0
+  startingAmount: 100
+  currentAmount: 100

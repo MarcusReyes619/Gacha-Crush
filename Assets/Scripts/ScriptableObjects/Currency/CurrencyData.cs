@@ -20,15 +20,16 @@ public class CurrencyData : ScriptableObject
         currentAmount -= value; // Increase the stored score
         onCurrencyChanged?.Invoke(currentAmount); // Notify listeners
     }
+
     public int GetCurrency()
     {
         return currentAmount;
     }
+
     public void Subscribe(UnityAction<int> function)
     {
         onCurrencyChanged += function;
     }
-
 
     public void UnSubscribe(UnityAction<int> function)
     {
