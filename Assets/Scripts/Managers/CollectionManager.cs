@@ -19,7 +19,7 @@ public class CollectionManager : MonoBehaviour
         foreach (GachaItem item in playerData.OwnedItems)
         {
             GameObject go = Instantiate(ItemBase);
-            go.transform.localScale = new Vector3(2, 2.5f, 2);
+            go.transform.localScale = new Vector3(1.5f, 2f, 2);
             go.transform.SetParent(gridLayout.transform);
             go.GetComponentsInChildren<Image>()[0].sprite = item.Border;
             go.GetComponentsInChildren<Image>()[2].sprite = item.GachaImg;

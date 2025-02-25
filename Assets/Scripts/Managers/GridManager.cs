@@ -42,7 +42,6 @@ public class GridManager : MonoBehaviour
 		SetGemHolderTransform();
 		GenerateGrid();
 		scoreData.Subscribe(UpdateScoreUI);
-		GameOverPanel.SetActive(false);
 	}
 
 	private void Update()
