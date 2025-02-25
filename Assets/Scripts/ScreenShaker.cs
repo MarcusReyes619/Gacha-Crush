@@ -8,7 +8,12 @@ public class ScreenShaker : MonoBehaviour
     [SerializeField] float shakeAmount;
     [SerializeField] float decreaseFactor;
     bool shakeCalled;
+    Vector3 oringalPos;
 
+    private void Start()
+    {
+        oringalPos = cam.transform.position;
+    }
     public void ShakeCam()
     {
         shakeCalled = true;
@@ -27,6 +32,7 @@ public class ScreenShaker : MonoBehaviour
             else
             {
                 shake = 0;
+                cam.transform.position = oringalPos;
                 shakeCalled = false;
             }
         }
