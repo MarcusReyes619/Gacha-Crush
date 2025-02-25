@@ -940,9 +940,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 20
+  m_MaxValue: 15
   m_WholeNumbers: 0
-  m_Value: 10
+  m_Value: 15
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2112,6 +2112,22 @@ PrefabInstance:
     - target: {fileID: 4029542028741820657, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: OtherMenu_UI
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054418009353776411, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054418009353776411, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054418009353776411, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054418009353776411, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4216349127816223791, guid: 10b8e4120a0cc524e845e6dac919303b, type: 3}
       propertyPath: m_AnchorMax.y
