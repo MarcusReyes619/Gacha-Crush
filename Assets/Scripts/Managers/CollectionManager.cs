@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class CollectionManager : MonoBehaviour
 {
-    List<GachaItem> items = new List<GachaItem>();
     [SerializeField] GameObject gridLayout;
     [SerializeField] GameObject ItemBase;
     [SerializeField] PlayerData playerData;

@@ -5,7 +5,7 @@ public class ScreenShaker : MonoBehaviour
 {
     [SerializeField] Camera cam;
     [SerializeField] float shake;
-    [SerializeField] float shakeAmount;
+    [SerializeField] public float shakeAmount;
     [SerializeField] float decreaseFactor;
     bool shakeCalled;
     Vector3 oringalPos;
@@ -23,10 +23,10 @@ public class ScreenShaker : MonoBehaviour
         if (shakeCalled) { 
             if (shake > 0)
             {
-            cam.transform.localPosition = Random.insideUnitSphere * shakeAmount;
-           
-            shake -= Time.deltaTime * decreaseFactor;
-            
+                Vector3 rand = Random.insideUnitSphere * shakeAmount;
+                rand.z = -10;
+                cam.transform.localPosition = rand;
+                shake -= Time.deltaTime * decreaseFactor;
 
             }
             else
