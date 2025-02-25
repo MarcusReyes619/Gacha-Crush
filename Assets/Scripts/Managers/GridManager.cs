@@ -30,7 +30,6 @@ public class GridManager : MonoBehaviour
     {
 		SetGemHolderTransform();
 		GenerateGrid();
-		//SetCameraTransform();
 		scoreData.Subscribe(UpdateScoreUI);
     }
 
@@ -47,11 +46,6 @@ public class GridManager : MonoBehaviour
 		timer -= Time.deltaTime;
 		TimerSlider_UI.value = timer;
 	}
-
-	//private void SetCameraTransform() // center camera
-	//{
-	//	//cameraTransform.position = new Vector3(width / 2, height / 2, -10);
-	//}
 
 	private void SetGemHolderTransform() // scale objects
 	{
