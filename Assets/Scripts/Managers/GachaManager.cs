@@ -37,12 +37,11 @@ public class GachaManager : MonoBehaviour
                 pc--;
                 audioSource.pitch = Random.Range(0.8f, 1.2f);
                 audioSource.PlayOneShot(rollSound);
-                
                 if (pc < 0)
                 {
                     pulling = false;
                     GachaItem item = Pull();
-                    screenShaker.shake = 1;
+                    screenShaker.shakeAmount = 0;
                     playerData.OwnedItems.Add(item);
                     if (item.Rarity == Rarity.Legendary)
                     {
@@ -57,7 +56,13 @@ public class GachaManager : MonoBehaviour
                 {
                     pt = 0.1f;
                 }
+                if (pc == 7) screenShaker.ShakeCam();
+                if (pc < 7)
+                {
+                    screenShaker.shakeAmount += 5;
+                }
             }
+
             pt -= Time.deltaTime;
         }
     }
