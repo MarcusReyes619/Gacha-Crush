@@ -8,9 +8,6 @@ public class TogglePauseMenu : MonoBehaviour
     public static TogglePauseMenu instance;
 
     [SerializeField] GameObject PauseMenu_UI;
-    [SerializeField] GameObject OtherMenu_UI;
-    [SerializeField] GameObject fadeScreen;
-    public float fadeDuration = 0.75f;
 
     [Header("Audio")]
     [SerializeField] private AudioSource Pause_SFX;
@@ -21,8 +18,6 @@ public class TogglePauseMenu : MonoBehaviour
     private void Start()
     {
         PauseMenu_UI.SetActive(false);
-        OtherMenu_UI.SetActive(false);
-        fadeScreen.SetActive(false);
 
         // Force UI elements to be interactable after returning to the main menu
         EventSystem.current.SetSelectedGameObject(null);
@@ -33,14 +28,6 @@ public class TogglePauseMenu : MonoBehaviour
         PauseMenu_UI.SetActive(true);
         Pause_SFX.Play();
 
-        GameManager.instance.PauseGame(true);
-    }
-
-    public void Open_OtherMenu()
-    {
-        OpenMenu_SFX.Play();
-
-        OtherMenu_UI.SetActive(true);
         GameManager.instance.PauseGame(true);
     }
 
@@ -70,14 +57,5 @@ public class TogglePauseMenu : MonoBehaviour
         {
             yield return null;
         }
-    }
-
-
-    private IEnumerator FadeToBlackAndLoadScene(string sceneName)
-    {
-        //fadeScreen.SetActive(true);
-        yield return new WaitForSeconds(fadeDuration);
-        SceneManager.LoadScene(sceneName);
-        //fadeScreen.SetActive(false);
     }
 }

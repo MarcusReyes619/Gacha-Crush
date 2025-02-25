@@ -72,6 +72,7 @@ public class GachaManager : MonoBehaviour
         }
     }
 
+
     public void PullButton()
     {
         pulling = true;
