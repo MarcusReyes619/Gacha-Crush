@@ -31,6 +31,7 @@ public class GridManager : MonoBehaviour
 		SetGemHolderTransform();
 		GenerateGrid();
 		scoreData.Subscribe(UpdateScoreUI);
+		GameManager.instance.IsGamePaused = false;
     }
 
 	private void Update()

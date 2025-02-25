@@ -53,7 +53,9 @@ public class InputController : MonoBehaviour
 
 		if (touch.phase == TouchPhase.Began)
 		{
-			RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(new Vector3(touch.position.x, touch.position.y)));
+			Vector3 touchPosition = new Vector3(touch.position.x, touch.position.y);
+
+			RaycastHit2D rayHit = Physics2D.GetRayIntersection(currentCamera.ScreenPointToRay(touchPosition));
 			Debug.Log(rayHit.transform.name);
 
 			selectedGem = rayHit.transform.GetComponent<Gem>();
@@ -64,7 +66,7 @@ public class InputController : MonoBehaviour
 		}
 		else if (touch.phase == TouchPhase.Ended)
 		{
-			endPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+			endPosition = currentCamera.ScreenToWorldPoint(Input.GetTouch(0).position);
 			
 			CalculateSwapGem();
 		}
