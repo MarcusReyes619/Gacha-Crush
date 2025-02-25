@@ -2346,6 +2346,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c8715997e8bdc064ab2271e2c2da877e, type: 2}
   - {fileID: 11400000, guid: dca81824b039cfe45b18a6a3cbc4e1d8, type: 2}
   particleSpawner: {fileID: 503310032}
+  currency: {fileID: 11400000, guid: e3199c9f5a9c65143b3941b8ac15258a, type: 2}
 --- !u!4 &2081016300
 Transform:
   m_ObjectHideFlags: 0

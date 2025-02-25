@@ -27,6 +27,7 @@ public class GridManager : MonoBehaviour
 	[SerializeField] private Slider TimerSlider_UI;
 	[SerializeField] private TMP_Text scoreText;
 	[SerializeField] private ScoreData scoreData;
+	[SerializeField] private CurrencyData currency;
 
 	private int scoreMult;
     GameObject[,] grid;
@@ -59,6 +60,7 @@ public class GridManager : MonoBehaviour
 			GamePanel.SetActive(false);
 			GameOverPanel.SetActive(true);
 			GameOverText.text = "GAME OVER\nScore: " + scoreText.text;
+			currency.Add(scoreData.GetScore());
 		}
 	}
 

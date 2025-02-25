@@ -1653,6 +1653,7 @@ MonoBehaviour:
   TimerSlider_UI: {fileID: 877630369}
   scoreText: {fileID: 369226168}
   scoreData: {fileID: 11400000, guid: 07b6686d49c6c544e951728ec137a0c9, type: 2}
+  currency: {fileID: 11400000, guid: e3199c9f5a9c65143b3941b8ac15258a, type: 2}
 --- !u!4 &1735919216
 Transform:
   m_ObjectHideFlags: 0
