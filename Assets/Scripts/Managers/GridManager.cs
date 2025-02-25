@@ -13,7 +13,7 @@ public class GridManager : MonoBehaviour
 	[SerializeField] private Transform gemHolderTransform;
 	[SerializeField] private GameObject[] gemPrefabs;
 	[SerializeField] private float addTime;
-	[SerializeField] private float mininumSwapDistance;
+	[SerializeField] public float mininumSwapDistance;
 	public GameObject selectedObject;
 
 	public float timer;
