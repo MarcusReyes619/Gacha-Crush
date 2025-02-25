@@ -13,6 +13,7 @@ public class GachaManager : MonoBehaviour
     public PlayerData playerData;
     public Button pullButton;
     public AudioSource audioSource;
+    public ScreenShaker screenShaker;
     public AudioClip rollSound;
     public AudioClip LegendarySound;
 
@@ -41,12 +42,13 @@ public class GachaManager : MonoBehaviour
                 {
                     pulling = false;
                     GachaItem item = Pull();
-                   
+                    screenShaker.shake = 1;
                     playerData.OwnedItems.Add(item);
                     if (item.Rarity == Rarity.Legendary)
                     {
                         audioSource.pitch = 1.0f;
                         audioSource.PlayOneShot(LegendarySound);
+                        
 
                     } 
                     pullButton.interactable = true;

@@ -612,6 +612,7 @@ GameObject:
   - component: {fileID: 298169918}
   - component: {fileID: 298169917}
   - component: {fileID: 298169920}
+  - component: {fileID: 298169921}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -737,6 +738,22 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &298169921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298169916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ba291ada42a0a4fbe9c176e42a6135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 298169918}
+  shake: 0
+  shakeAmount: 100
+  decreaseFactor: 0.1
 --- !u!1001 &614862031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2155,7 +2172,8 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 6ed30b14cc8c49d488a00371b04b743b, type: 2}
   pullButton: {fileID: 225649816}
   audioSource: {fileID: 714610353}
-  rollSound: {fileID: 8300000, guid: 4c5a22d9d8a827f4d843e982b2e75283, type: 3}
+  screenShaker: {fileID: 298169921}
+  rollSound: {fileID: 8300000, guid: b5903a1e35dc8024fbcb18b3b3831c05, type: 3}
   LegendarySound: {fileID: 8300000, guid: 2ca6c424d06edbe4ea37969000052280, type: 3}
   commonItems:
   - {fileID: 11400000, guid: bf862eec634ada54788a8f139fc25c1b, type: 2}
