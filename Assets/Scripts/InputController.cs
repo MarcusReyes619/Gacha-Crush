@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    [SerializeField] private Camera currentCamera;
+	[SerializeField] private Camera currentCamera;
 
-    private Vector2 startPosition;
+	private Vector2 startPosition;
 	private Vector2 endPosition;
-    private bool renderDebugLine;
+	private bool renderDebugLine;
 	private GridManager gridManager;
 
 	private Gem selectedGem;
@@ -17,24 +17,22 @@ public class InputController : MonoBehaviour
 		gridManager = gridObject.GetComponent<GridManager>();
 	}
 
-    private void Update()
-    {
-		if (Input.GetMouseButtonDown(0))
-        {
-			GetGemFromMousePosition();
+	private void Update()
+	{
+		//if (Input.GetMouseButtonDown(0))
+  //      {
+		//	GetGemFromMousePosition();
+		//}
+
+		if (Input.touchCount > 0)
+		{
+			GetGemFromTouchPosition();
 		}
 
-        if (renderDebugLine)
-        {
-			endPosition = GetMousePosition();
-
-			Debug.DrawLine(startPosition, endPosition, Color.red);
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-			CalculateSwapGem();
-		}
+		//if (Input.GetMouseButtonUp(0))
+  //      {
+		//	CalculateSwapGem();
+		//}
     }
 
 	private void GetGemFromMousePosition()
@@ -47,6 +45,31 @@ public class InputController : MonoBehaviour
 
 		startPosition = GetMousePosition();
 		renderDebugLine = true;
+	}
+
+	private void GetGemFromTouchPosition()
+	{
+		Touch touch = Input.GetTouch(0);
+
+		if (touch.phase == TouchPhase.Began)
+		{
+			RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(new Vector3(touch.position.x, touch.position.y)));
+			Debug.Log(rayHit.transform.name);
+
+			selectedGem = rayHit.transform.GetComponent<Gem>();
+			selectedGem.SelectObject(0, 0);
+
+			startPosition = GetMousePosition();
+			renderDebugLine = true;
+		}
+		else if (touch.phase == TouchPhase.Ended)
+		{
+			endPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+			
+			CalculateSwapGem();
+		}
+
+		
 	}
 
 	private void CalculateSwapGem()
