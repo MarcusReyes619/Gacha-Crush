@@ -8,10 +8,22 @@ public class ParticleSpawner : MonoBehaviour
 
     public void SpawnPartcle()
     {
-        Instantiate(particle[0]);
+        Instantiate(particle[0],this.transform);
     }
-    public void SpawnPartcle(GachaItem rarity) 
+    public void SpawnPartcle(GachaItem item) 
     {
-        
+        switch (item.Rarity)
+        {
+            case Rarity.Common:
+                break;
+            case Rarity.Uncommon:
+                break;
+            case Rarity.Rare:
+                break;
+            case Rarity.Ultimate:
+                break;
+            case Rarity.Legendary:
+                break;
+        }
     }
 }

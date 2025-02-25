@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
@@ -11,23 +12,32 @@ public class GridManager : MonoBehaviour
 	[SerializeField] private int width, height;
 	[SerializeField] private Transform cameraTransform;
 	[SerializeField] private Transform gemHolderTransform;
-	[SerializeField] private GameObject[] gemPrefabs;
 	[SerializeField] private float addTime;
-	private GameObject selectedObject;
+	[SerializeField] public float mininumSwapDistance;
+	[SerializeField] private GameObject[] gemPrefabs;
+	[SerializeField] private GameObject TopPanel;
+	[SerializeField] private GameObject GamePanel;
+	[SerializeField] private GameObject GameOverPanel;
+	[SerializeField] private TMP_Text GameOverText;
+	public GameObject selectedObject;
 
 	public float timer;
 
 	[Header("UI")]
 	[SerializeField] private Slider TimerSlider_UI;
+	[SerializeField] private TMP_Text scoreText;
+	[SerializeField] private ScoreData scoreData;
+	[SerializeField] private CurrencyData currency;
 
+	private int scoreMult;
     GameObject[,] grid;
 
     void Start()
     {
 		SetGemHolderTransform();
 		GenerateGrid();
-		SetCameraTransform();
-    }
+		scoreData.Subscribe(UpdateScoreUI);
+	}
 
 	private void Update()
 	{
@@ -41,11 +51,17 @@ public class GridManager : MonoBehaviour
 	{
 		timer -= Time.deltaTime;
 		TimerSlider_UI.value = timer;
-	}
 
-	private void SetCameraTransform() // center camera
-	{
-		//cameraTransform.position = new Vector3(width / 2, height / 2, -10);
+		if (timer <= 0)
+		{
+			GameManager.instance.IsGamePaused = true;
+			//setvisible ui
+			TopPanel.SetActive(false);
+			GamePanel.SetActive(false);
+			GameOverPanel.SetActive(true);
+			GameOverText.text = "GAME OVER\nScore: " + scoreText.text;
+			currency.Add(scoreData.GetScore());
+		}
 	}
 
 	private void SetGemHolderTransform() // scale objects
@@ -95,33 +111,45 @@ public class GridManager : MonoBehaviour
 		grid[x, y].transform.localScale = new Vector3(1 * imageScale, 1 * imageScale);
 	}
 
+
 	public void SelectObject(int posX, int posY)
 	{
-		if (selectedObject != null)
-		{
-			var swapObject = grid[posX, posY];
-			var selectedPos = selectedObject.transform.localPosition;
+		selectedObject = grid[posX, posY];
+	}
 
-			grid[posX, posY] = selectedObject;
-			grid[posX, posY].transform.localPosition = new Vector3(posX, posY, grid[posX, posY].transform.localPosition.z);
+	public void DeselectObject()
+	{
+		selectedObject = null;
+	}
 
-			grid[(int)selectedPos.x, (int)selectedPos.y] = swapObject;
-			grid[(int)selectedPos.x, (int)selectedPos.y].transform.localPosition = selectedPos;
+	public void ChooseSwapGems(int posX, int posY)
+	{
+		var selectedPos = selectedObject.transform.localPosition;
+		SwapObjects((int)selectedPos.x + posX, (int)selectedPos.y + posY);
+	}
 
-			selectedObject = null; //reset currently selected after
+	public void SwapObjects(int posX, int posY)
+	{
+		if (selectedObject == null) return;
 
-			List<Vector2Int> firstMatchCoordinates = CheckMatch(posX, posY);
-			firstMatchCoordinates.AddRange(CheckMatch((int)selectedPos.x, (int)selectedPos.y));
+		var swapObject = grid[posX, posY];
+		var selectedPos = selectedObject.transform.localPosition;
 
-			DropHigherGems(firstMatchCoordinates);
+		grid[posX, posY] = selectedObject;
+		grid[posX, posY].transform.localPosition = new Vector3(posX, posY, grid[posX, posY].transform.localPosition.z);
 
-			SimpleFillEmptyGems();
-		}
-		else
-		{
-			selectedObject = grid[posX, posY];
-			print("selected object: " + selectedObject.name);
-		}
+		grid[(int)selectedPos.x, (int)selectedPos.y] = swapObject;
+		grid[(int)selectedPos.x, (int)selectedPos.y].transform.localPosition = selectedPos;
+
+		selectedObject = null; //reset currently selected after
+
+		List<Vector2Int> firstMatchCoordinates = CheckMatch(posX, posY);
+		firstMatchCoordinates.AddRange(CheckMatch((int)selectedPos.x, (int)selectedPos.y));
+
+		DropHigherGems(firstMatchCoordinates);
+
+		SimpleFillEmptyGems();
+
 	}
 
 	private List<Vector2Int> CheckMatch(int x, int y)
@@ -192,7 +220,8 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
-			matchCoordinates.AddRange(MatchMade(coordinates));
+            scoreMult = matchAmount - 3;
+            matchCoordinates.AddRange(MatchMade(coordinates));
 		}
 
 		// Clear values for up/down check
@@ -244,6 +273,7 @@ public class GridManager : MonoBehaviour
 
 		if (matchAmount >= 3)
 		{
+			scoreMult = matchAmount - 3;
 			matchCoordinates.AddRange(MatchMade(coordinates));
 		}
 
@@ -253,11 +283,17 @@ public class GridManager : MonoBehaviour
 	private List<Vector2Int> MatchMade(List<Vector2Int> coordinates)
 	{
 		print("match made!!!");
+		scoreData.Add(scoreMult > 0 ? 100 * scoreMult : 100);
 		timer += addTime;
 		return DeleteMatchedGems(coordinates);
 	}
 
-	private List<Vector2Int> DeleteMatchedGems(List<Vector2Int> coordinates)
+    private void UpdateScoreUI(int newScore)
+    {
+        scoreText.text = "Score: " + newScore;
+    }
+
+    private List<Vector2Int> DeleteMatchedGems(List<Vector2Int> coordinates)
 	{
 		foreach (Vector2Int coordinate in coordinates)
 		{

@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -72,6 +71,7 @@ public class AudioManager : MonoBehaviour
         {
             nextMusicName = newMusic;
             //StartCoroutine(FadeToBlackAndLoadScene(targetScene));
+            GameManager.instance.PauseGame(false);
             SceneManager.LoadScene(targetScene.ToString());
 
         }
