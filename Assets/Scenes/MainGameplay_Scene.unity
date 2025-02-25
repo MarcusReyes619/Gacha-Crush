@@ -1642,6 +1642,7 @@ MonoBehaviour:
   - {fileID: 3180089894742263830, guid: a38982706c472004cb955100e615dcdd, type: 3}
   - {fileID: 3180089894742263830, guid: a9de033bc05c4fc42aebfbf061c02627, type: 3}
   addTime: 3
+  mininumSwapDistance: 0
   selectedObject: {fileID: 0}
   timer: 30
   TimerSlider_UI: {fileID: 877630369}
