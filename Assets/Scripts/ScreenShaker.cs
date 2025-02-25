@@ -31,7 +31,7 @@ public class ScreenShaker : MonoBehaviour
             }
             else
             {
-                shake = 0;
+                shake = 1;
                 cam.transform.position = oringalPos;
                 shakeCalled = false;
             }

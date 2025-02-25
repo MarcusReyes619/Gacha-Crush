@@ -64,7 +64,7 @@ public class GridManager : MonoBehaviour
 			TopPanel.SetActive(false);
 			GamePanel.SetActive(true);
 			GameOverPanel.SetActive(true);
-			GameOverText.text = "GAME OVER\nScore: " + scoreText.text;
+			GameOverText.text = scoreText.text;
             CurrencyManager.instance.AddCurrency(scoreData.GetScore());
 		}
 	}

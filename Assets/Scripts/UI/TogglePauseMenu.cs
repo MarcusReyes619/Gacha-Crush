@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,7 @@ public class TogglePauseMenu : MonoBehaviour
     public static TogglePauseMenu instance;
 
     [SerializeField] GameObject PauseMenu_UI;
+    [SerializeField] TextMeshProUGUI currencyText;
 
     [Header("Audio")]
     [SerializeField] private AudioSource Pause_SFX;
@@ -27,6 +29,8 @@ public class TogglePauseMenu : MonoBehaviour
     {
         PauseMenu_UI.SetActive(true);
         Pause_SFX.Play();
+
+        currencyText.text = "Gold: " + CurrencyManager.instance.GetCurrency().ToString();
 
         GameManager.instance.PauseGame(true);
     }

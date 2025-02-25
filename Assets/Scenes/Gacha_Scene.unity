@@ -688,7 +688,7 @@ Transform:
   m_GameObject: {fileID: 298169916}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 742, y: 977.77, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -752,54 +752,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 298169918}
   shake: 0
-  shakeAmount: 100
-  decreaseFactor: 0.1
---- !u!1 &503310030
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 503310031}
-  - component: {fileID: 503310032}
-  m_Layer: 5
-  m_Name: ParticleSpanwer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &503310031
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503310030}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 283.9, y: 933.75, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &503310032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503310030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 336396ee2c795b74c9801f7181cfa0d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particle:
-  - {fileID: 3678712926864085374, guid: 2d86fac4fee5c044cad41cba2ff29b1d, type: 3}
+  shakeAmount: 0
+  decreaseFactor: 1
 --- !u!1 &714610352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,8 +1600,8 @@ RectTransform:
   m_GameObject: {fileID: 1621786783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 1.1277814, y: 1.1277814, z: 1.1277814}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.1277813, y: 1.1277813, z: 1.1277813}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1214464465}
   - {fileID: 931254119}
@@ -1656,8 +1610,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 742, y: 977.77}
-  m_SizeDelta: {x: 1439.9999, y: 1919.9999}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 909.4737, y: 1920}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1675602469
 GameObject:
@@ -2237,7 +2191,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 56d4750dc20946943987f35c8cc114fe, type: 2}
   - {fileID: 11400000, guid: c8715997e8bdc064ab2271e2c2da877e, type: 2}
   - {fileID: 11400000, guid: dca81824b039cfe45b18a6a3cbc4e1d8, type: 2}
-  particleSpawner: {fileID: 503310032}
   currency: {fileID: 11400000, guid: e3199c9f5a9c65143b3941b8ac15258a, type: 2}
 --- !u!4 &2081016300
 Transform:
@@ -2392,4 +2345,3 @@ SceneRoots:
   - {fileID: 2081016300}
   - {fileID: 269270015}
   - {fileID: 714610354}
-  - {fileID: 503310031}
