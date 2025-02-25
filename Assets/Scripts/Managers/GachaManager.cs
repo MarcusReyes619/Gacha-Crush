@@ -82,8 +82,7 @@ public class GachaManager : MonoBehaviour
 
     public GachaItem Pull()
     {
-        if (currency.GetCurrency() > 10)
-        {
+
             float rand = Random.Range(0f, 100f); // Generate a random number between 0-100
 
             List<GachaItem> selectedList = null;
@@ -118,11 +117,8 @@ public class GachaManager : MonoBehaviour
             rarityText.text = newItem.Rarity.ToString();
 
             return newItem;
-        }
-        else
-        {
-            return null;
-        }
+        
+        
     }
 
     public void OpenCollection()
