@@ -42,6 +42,7 @@ public class GridManager : MonoBehaviour
 		SetGemHolderTransform();
 		GenerateGrid();
 		scoreData.Subscribe(UpdateScoreUI);
+		TimerSlider_UI.value = timer;
 	}
 
 	private void Update()
@@ -56,6 +57,11 @@ public class GridManager : MonoBehaviour
 	{
 		timer -= Time.deltaTime;
 		TimerSlider_UI.value = timer;
+
+		if (TimerSlider_UI.maxValue < timer)
+		{
+			TimerSlider_UI.maxValue = timer;
+		}
 
 		if (timer <= 0)
 		{
